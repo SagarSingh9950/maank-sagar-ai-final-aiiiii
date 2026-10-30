@@ -1,0 +1,52 @@
+{
+  "successCriteria": [
+    "System information collected",
+    "Summary prepared"
+  ],
+  "steps": [
+    {
+      "approval": "none",
+      "dependsOn": [],
+      "tool": "system_info",
+      "id": "collect_system_info"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "collect_system_info"
+      ],
+      "tool": "llm_summarize",
+      "id": "summarize_system_info"
+    }
+  ],
+  "name": "System Check",
+  "inputs": [
+    {
+      "name": "check",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "version": "1.0.0",
+  "id": "system-check",
+  "description": "Collect available system information and summarize it.",
+  "allowedTools": [
+    "system_info",
+    "llm_summarize"
+  ],
+  "status": "ready",
+  "successChecks": [
+    {
+      "id": "system-information-collected",
+      "stepId": "collect_system_info",
+      "path": "$",
+      "type": "object"
+    },
+    {
+      "id": "system-summary-prepared",
+      "stepId": "summarize_system_info",
+      "path": "text",
+      "type": "non_empty_string"
+    }
+  ]
+}

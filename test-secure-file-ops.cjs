@@ -1,0 +1,34 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const os = require("node:os");
+const path = require("node:path");
+const { buildOrganizationPlan, applyApprovedMoves } = require("./electron/agent/secureFileOps.cjs");
+const root = fs.mkdtempSync(path.join(os.tmpdir(), "friday-pai-fileops-"));
+try {
+  fs.writeFileSync(path.join(root, "photo.png"), "image");
+  fs.writeFileSync(path.join(root, "notes.md"), "notes");
+  fs.writeFileSync(path.join(root, ".env"), "SECRET=do-not-touch");
+  const plan = buildOrganizationPlan(root);
+  assert.equal(plan.moves.length, 2);
+  assert.ok(!plan.moves.some(move => move.from === ".env"));
+  assert.ok(fs.existsSync(path.join(root, "photo.png")), "planning must not change files");
+  assert.throws(() => applyApprovedMoves(root, [{ from: "photo.png", to: "../outside.png" }]), /relative|escapes/i);
+  fs.mkdirSync(path.join(root, "images"), { recursive: true });
+  fs.writeFileSync(path.join(root, "images", "photo.png"), "collision");
+  assert.throws(() => applyApprovedMoves(root, [{ from: "photo.png", to: "images/photo.png" }]), /already exists/i);
+  fs.rmSync(path.join(root, "images"), { recursive: true, force: true });
+  const result = applyApprovedMoves(root, plan.moves);
+  assert.equal(result.movedCount, 2);
+  assert.equal(fs.readFileSync(path.join(root, "images", "photo.png"), "utf8"), "image");
+  assert.equal(fs.readFileSync(path.join(root, "documents", "notes.md"), "utf8"), "notes");
+  const retryResult = applyApprovedMoves(root, plan.moves);
+  assert.equal(retryResult.movedCount, 2);
+  assert.equal(retryResult.newlyMovedCount, 0);
+  assert.equal(retryResult.alreadyMovedCount, 2);
+  assert.throws(() => applyApprovedMoves(root, [{ from: "missing.txt", to: "documents/notes.md" }]), /missing|cannot be verified/i);
+  fs.writeFileSync(path.join(root, "new.txt"), "before preview");
+  const stalePlan = buildOrganizationPlan(root);
+  fs.writeFileSync(path.join(root, "new.txt"), "changed after preview");
+  assert.throws(() => applyApprovedMoves(root, stalePlan.moves), /changed after the preview/i);
+  console.log("PASS: file organization is preview-first, scoped, refuses overwrites, recognizes completed moves on retry, and rejects stale previews");
+} finally { fs.rmSync(root, { recursive: true, force: true }); }

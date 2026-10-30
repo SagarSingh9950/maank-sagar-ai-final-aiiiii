@@ -1,0 +1,333 @@
+{
+  "goals": [
+    {
+      "id": "goal-1792231597640",
+      "title": "Learn Node.js",
+      "description": "Become comfortable with Node.js",
+      "status": "active",
+      "createdAt": "2026-10-17T10:06:37.641Z",
+      "updatedAt": "2026-10-17T10:06:37.655Z",
+      "tasks": []
+    },
+    {
+      "id": "goal-1792235022230",
+      "title": "Learn Node.js",
+      "description": "Improve my Node.js skills",
+      "status": "active",
+      "createdAt": "2026-10-17T11:03:42.230Z",
+      "updatedAt": "2026-10-17T11:03:42.243Z",
+      "tasks": []
+    },
+    {
+      "id": "goal-1792238377083",
+      "title": "Learn python",
+      "description": "",
+      "status": "active",
+      "createdAt": "2026-10-17T11:59:37.084Z",
+      "updatedAt": "2026-10-19T07:03:39.988Z",
+      "tasks": [
+        {
+          "id": "task-1792393419806",
+          "title": "Set up Python environment",
+          "description": "Install Python and configure your code editor or IDE for Python development.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.806Z",
+          "completedAt": null,
+          "dueDate": "2026-10-17T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419826",
+          "title": "Learn basic syntax and variables",
+          "description": "Understand Python's syntax rules, data types, and how to store information in variables.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.827Z",
+          "completedAt": null,
+          "dueDate": "2026-10-18T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419846",
+          "title": "Master control flow",
+          "description": "Learn if/else statements, loops, and how to control the execution of your code.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.846Z",
+          "completedAt": null,
+          "dueDate": "2026-10-19T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419864",
+          "title": "Practice functions and modules",
+          "description": "Learn how to create reusable code blocks and import external libraries.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.864Z",
+          "completedAt": null,
+          "dueDate": "2026-10-20T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419931",
+          "title": "Work with data structures",
+          "description": "Understand lists, dictionaries, tuples, and sets for organizing data.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.931Z",
+          "completedAt": null,
+          "dueDate": "2026-10-21T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419950",
+          "title": "Build a simple project",
+          "description": "Create a basic application like a calculator, to-do list, or number guessing game to apply what you've learned.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.950Z",
+          "completedAt": null,
+          "dueDate": "2026-10-22T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419968",
+          "title": "Explore object-oriented programming",
+          "description": "Learn about classes, objects, inheritance, and encapsulation to structure your code effectively.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.968Z",
+          "completedAt": null,
+          "dueDate": "2026-10-23T11:59:37.084Z"
+        },
+        {
+          "id": "task-1792393419988",
+          "title": "Continue learning and practicing",
+          "description": "Build more complex projects, explore advanced topics, and contribute to open source or personal repositories.",
+          "status": "pending",
+          "createdAt": "2026-10-19T07:03:39.988Z",
+          "completedAt": null,
+          "dueDate": "2026-10-24T11:59:37.084Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-1792342341223",
+      "title": "Increase body weight",
+      "description": "Increase body weight in 1 month",
+      "status": "active",
+      "createdAt": "2026-10-18T16:52:21.223Z",
+      "updatedAt": "2026-10-18T16:52:21.229Z",
+      "tasks": []
+    },
+    {
+      "id": "goal-1792343875748",
+      "title": "Increase strength in body",
+      "description": "in 2 weeks",
+      "status": "active",
+      "createdAt": "2026-10-18T17:17:55.748Z",
+      "updatedAt": "2026-10-18T18:31:00.868Z",
+      "tasks": [
+        {
+          "id": "task-1792348260800",
+          "title": "Define current fitness baseline and set specific strength goals",
+          "description": "Measure current lifting capacity or bodyweight exercises and establish clear, measurable targets for the 2-week period.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.800Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792348260814",
+          "title": "Create a structured 2-week strength training program",
+          "description": "Design a workout schedule targeting major muscle groups with progressive overload, allowing for adequate rest between sessions.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.814Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792348260825",
+          "title": "Purchase or organize necessary workout equipment and attire",
+          "description": "Ensure you have appropriate footwear, comfortable clothing, and any required weights or resistance bands for the planned routines.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.825Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792348260836",
+          "title": "Complete first week of training sessions as programmed",
+          "description": "Follow the established workout schedule, focusing on proper form and tracking weights/reps performed each session.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.836Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792348260847",
+          "title": "Complete second week of training sessions as programmed",
+          "description": "Follow the established workout schedule, aiming to increase weights or reps from the first week where possible, and monitor physical recovery.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.847Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792348260858",
+          "title": "Measure and record progress toward strength goals",
+          "description": "Compare current performance to the baseline established on day 1 to quantify improvements in strength over the 2-week period.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.858Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792348260868",
+          "title": "Plan next phase of training based on achieved results",
+          "description": "Review progress data and set new goals or adjust the training program for continued strength development beyond the initial 2 weeks.",
+          "status": "pending",
+          "createdAt": "2026-10-18T18:31:00.868Z",
+          "completedAt": null
+        }
+      ]
+    },
+    {
+      "id": "goal-1792345204403",
+      "title": "Learn martial arts",
+      "description": "in 2 weeks",
+      "status": "active",
+      "createdAt": "2026-10-18T17:40:04.404Z",
+      "updatedAt": "2026-10-18T18:44:59.458Z",
+      "tasks": [
+        {
+          "id": "task-1792345437306",
+          "title": "Research local martial arts schools",
+          "description": "Find schools offering styles suitable for beginners within commuting distance.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.306Z",
+          "completedAt": null,
+          "day": 1,
+          "dueDate": "2026-10-18T18:44:59.457Z"
+        },
+        {
+          "id": "task-1792345437317",
+          "title": "Attend trial classes",
+          "description": "Visit 2-3 schools to observe teaching style and atmosphere before committing.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.317Z",
+          "completedAt": null,
+          "day": 3,
+          "dueDate": "2026-10-20T18:44:59.457Z"
+        },
+        {
+          "id": "task-1792345437327",
+          "title": "Purchase basic gear",
+          "description": "Buy essential equipment like uniform, gloves, or protective gear depending on chosen style.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.327Z",
+          "completedAt": null,
+          "day": 5,
+          "dueDate": "2026-10-22T18:44:59.457Z"
+        },
+        {
+          "id": "task-1792345437336",
+          "title": "Establish training schedule",
+          "description": "Block out consistent time slots in your calendar for regular practice sessions.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.336Z",
+          "completedAt": null,
+          "day": 7,
+          "dueDate": "2026-10-24T18:44:59.457Z"
+        },
+        {
+          "id": "task-1792345437345",
+          "title": "Learn fundamental stances and movements",
+          "description": "Master basic postures, footwork, and introductory techniques from your chosen style.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.345Z",
+          "completedAt": null,
+          "day": 9,
+          "dueDate": "2026-10-26T18:44:59.457Z"
+        },
+        {
+          "id": "task-1792345437363",
+          "title": "Practice daily at home",
+          "description": "Dedicate 15-30 minutes daily to reinforce techniques learned in class.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.363Z",
+          "completedAt": null,
+          "day": 11,
+          "dueDate": "2026-10-28T18:44:59.457Z"
+        },
+        {
+          "id": "task-1792345437374",
+          "title": "Set specific short-term goals",
+          "description": "Define measurable milestones like learning a form, achieving a certain belt level, or mastering specific techniques.",
+          "status": "pending",
+          "createdAt": "2026-10-18T17:43:57.374Z",
+          "completedAt": null,
+          "day": 14,
+          "dueDate": "2026-10-31T18:44:59.457Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-1792392662861",
+      "title": "Test Goal",
+      "description": "Testing goal planning",
+      "status": "active",
+      "createdAt": "2026-10-19T06:51:02.859Z",
+      "updatedAt": "2026-10-19T06:54:29.287Z",
+      "deadline": null,
+      "tasks": [
+        {
+          "id": "task-1792392701636",
+          "title": "Learn the basics",
+          "description": "Complete the first basic lesson",
+          "status": "pending",
+          "createdAt": "2026-10-19T06:51:41.636Z",
+          "completedAt": null
+        },
+        {
+          "id": "task-1792392869202",
+          "title": "Define goal scope and requirements",
+          "description": "Clarify what needs to be achieved and identify key success criteria.",
+          "status": "pending",
+          "createdAt": "2026-10-19T06:54:29.202Z",
+          "completedAt": null,
+          "dueDate": "2026-10-19T06:51:02.859Z"
+        },
+        {
+          "id": "task-1792392869225",
+          "title": "Gather necessary resources and information",
+          "description": "Collect all materials, data, or tools required for the goal.",
+          "status": "pending",
+          "createdAt": "2026-10-19T06:54:29.225Z",
+          "completedAt": null,
+          "dueDate": "2026-10-20T06:51:02.859Z"
+        },
+        {
+          "id": "task-1792392869246",
+          "title": "Create initial plan or outline",
+          "description": "Structure the approach with milestones and action steps.",
+          "status": "pending",
+          "createdAt": "2026-10-19T06:54:29.246Z",
+          "completedAt": null,
+          "dueDate": "2026-10-21T06:51:02.859Z"
+        },
+        {
+          "id": "task-1792392869267",
+          "title": "Execute first phase of the plan",
+          "description": "Begin implementation with the first set of actions.",
+          "status": "pending",
+          "createdAt": "2026-10-19T06:54:29.267Z",
+          "completedAt": null,
+          "dueDate": "2026-10-22T06:51:02.859Z"
+        },
+        {
+          "id": "task-1792392869287",
+          "title": "Review progress and adjust approach",
+          "description": "Evaluate what's working and make necessary modifications.",
+          "status": "pending",
+          "createdAt": "2026-10-19T06:54:29.287Z",
+          "completedAt": null,
+          "dueDate": "2026-10-23T06:51:02.859Z"
+        }
+      ]
+    },
+    {
+      "id": "goal-1792393371778",
+      "title": "Learn Python",
+      "description": "",
+      "status": "active",
+      "createdAt": "2026-10-19T07:02:51.778Z",
+      "updatedAt": "2026-10-19T07:02:51.778Z",
+      "deadline": "2024-10-20T00:00:00.000Z",
+      "tasks": []
+    }
+  ]
+}

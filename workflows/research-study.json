@@ -1,0 +1,84 @@
+{
+  "successCriteria": [
+    "Research results collected",
+    "Summary prepared",
+    "Study notes organized"
+  ],
+  "steps": [
+    {
+      "approval": "none",
+      "dependsOn": [],
+      "tool": "web_search",
+      "id": "search"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "search"
+      ],
+      "tool": "llm_summarize",
+      "id": "summarize"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "summarize"
+      ],
+      "tool": "llm_format_notes",
+      "id": "organize_notes"
+    },
+    {
+      "approval": "required",
+      "dependsOn": [
+        "organize_notes"
+      ],
+      "capabilityStatus": "available",
+      "tool": "save_notes",
+      "id": "save_notes",
+      "approvalPreviewFrom": "organize_notes"
+    }
+  ],
+  "name": "Research & Study",
+  "inputs": [
+    {
+      "name": "topic",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "focus",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "version": "1.0.0",
+  "id": "research-study",
+  "description": "Research a topic, summarize useful sources, organize study notes, and prepare notes for saving.",
+  "allowedTools": [
+    "web_search",
+    "llm_summarize",
+    "llm_format_notes",
+    "save_notes"
+  ],
+  "status": "ready",
+  "successChecks": [
+    {
+      "id": "research-results-collected",
+      "stepId": "search",
+      "path": "$",
+      "type": "non_empty_array"
+    },
+    {
+      "id": "research-summary-prepared",
+      "stepId": "summarize",
+      "path": "text",
+      "type": "non_empty_string"
+    },
+    {
+      "id": "study-notes-organized",
+      "stepId": "organize_notes",
+      "path": "text",
+      "type": "non_empty_string"
+    }
+  ]
+}

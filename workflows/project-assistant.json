@@ -1,0 +1,88 @@
+{
+  "successCriteria": [
+    "Relevant files inspected",
+    "Findings summarized",
+    "Next steps suggested"
+  ],
+  "steps": [
+    {
+      "approval": "none",
+      "action": "list",
+      "dependsOn": [],
+      "tool": "file_manager",
+      "id": "list_project_files"
+    },
+    {
+      "approval": "none",
+      "action": "find",
+      "dependsOn": [
+        "list_project_files"
+      ],
+      "tool": "file_manager",
+      "id": "find_relevant_files"
+    },
+    {
+      "approval": "none",
+      "action": "read",
+      "dependsOn": [
+        "find_relevant_files"
+      ],
+      "tool": "file_manager",
+      "id": "inspect_code"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "inspect_code"
+      ],
+      "tool": "llm_plan",
+      "id": "suggest_next_steps"
+    },
+    {
+      "approval": "required",
+      "dependsOn": [
+        "suggest_next_steps"
+      ],
+      "capabilityStatus": "available",
+      "tool": "file_writer",
+      "id": "save_review_proposal",
+      "approvalPreviewFrom": "suggest_next_steps"
+    }
+  ],
+  "name": "Project Assistant",
+  "inputs": [
+    {
+      "name": "projectPath",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "goal",
+      "type": "string",
+      "required": true
+    }
+  ],
+  "version": "1.0.0",
+  "id": "project-assistant",
+  "description": "Inspect project files, summarize findings, and save a review proposal without modifying source files.",
+  "allowedTools": [
+    "file_manager",
+    "llm_plan",
+    "file_writer"
+  ],
+  "status": "ready",
+  "successChecks": [
+    {
+      "id": "relevant-files-inspected",
+      "stepId": "inspect_code",
+      "path": "files",
+      "type": "array"
+    },
+    {
+      "id": "findings-summarized",
+      "stepId": "suggest_next_steps",
+      "path": "text",
+      "type": "non_empty_string"
+    }
+  ]
+}

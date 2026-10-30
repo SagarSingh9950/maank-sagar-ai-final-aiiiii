@@ -1,0 +1,289 @@
+html {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pl-64 {
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.pl-64 > main {
+  width: 100%;
+  height: 100vh;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+}
+
+.pl-64 > main::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+.pl-64 > main::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(132, 148, 149, 0.45);
+}
+
+#view-jarvis.dashboard-chat-layout {
+  align-items: stretch;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.dashboard-chat-main {
+  min-height: 0;
+}
+
+.dashboard-chat-main #dashboard-chat-messages {
+  max-width: 100%;
+}
+
+.dashboard-chat-main #dashboard-chat-message-list {
+  min-height: 0;
+  max-height: min(42vh, 26rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.dashboard-chat-main #dashboard-chat-message-list > div {
+  overflow-wrap: anywhere;
+}
+
+.dashboard-conversation-sidebar {
+  width: 18rem;
+  max-width: 34%;
+  min-width: 14rem;
+  max-height: calc(100vh - 7rem);
+  border: 1px solid rgba(132, 148, 149, 0.18);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+}
+
+.conversation-sidebar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(132, 148, 149, 0.18);
+}
+
+.conversation-sidebar-heading h2 {
+  font-size: 0.95rem;
+}
+
+.conversation-new-button {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0, 220, 230, 0.35);
+  border-radius: 0.7rem;
+  background: rgba(0, 220, 230, 0.08);
+  color: #00dce6;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.conversation-new-button:hover {
+  background: rgba(0, 220, 230, 0.16);
+  transform: translateY(-1px);
+}
+
+.conversation-new-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.conversation-history-list {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: auto;
+  padding-top: 0.75rem;
+}
+
+.conversation-history-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  background: transparent;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.conversation-history-item:hover,
+.conversation-history-item.selected {
+  border-color: rgba(0, 220, 230, 0.3);
+  background: rgba(0, 220, 230, 0.07);
+}
+
+.conversation-history-select {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.conversation-history-select:disabled,
+.conversation-delete-button:disabled {
+  cursor: default;
+}
+
+.conversation-delete-button {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  margin: 0.55rem 0.55rem 0 0;
+  border: 1px solid rgba(255, 91, 91, 0.2);
+  border-radius: 0.6rem;
+  background: rgba(255, 91, 91, 0.07);
+  color: #ff8a80;
+  cursor: pointer;
+  font-size: 1.35rem;
+  line-height: 1;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.conversation-delete-button:hover:not(:disabled) {
+  border-color: rgba(255, 91, 91, 0.25);
+  background: rgba(255, 91, 91, 0.1);
+  color: #ff8a80;
+}
+
+.conversation-delete-confirmation {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  padding: 0.55rem;
+  color: #b9cacb;
+  font-size: 0.68rem;
+}
+
+.conversation-delete-confirm,
+.conversation-delete-cancel {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid rgba(132, 148, 149, 0.25);
+  border-radius: 0.45rem;
+  background: rgba(132, 148, 149, 0.08);
+  color: #e2e2e6;
+  cursor: pointer;
+  font-size: 0.68rem;
+}
+
+.conversation-delete-confirm {
+  border-color: rgba(255, 91, 91, 0.3);
+  background: rgba(255, 91, 91, 0.12);
+  color: #ff8a80;
+}
+
+.conversation-delete-confirm:hover:not(:disabled) {
+  background: rgba(255, 91, 91, 0.22);
+}
+
+.conversation-delete-cancel:hover:not(:disabled) {
+  background: rgba(132, 148, 149, 0.18);
+}
+
+.conversation-delete-confirm:disabled,
+.conversation-delete-cancel:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.conversation-history-title {
+  overflow: hidden;
+  color: #e2e2e6;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-history-preview {
+  display: -webkit-box;
+  overflow: hidden;
+  color: #b9cacb;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.conversation-history-date {
+  align-self: flex-end;
+  color: #849495;
+  font-size: 0.65rem;
+}
+
+.dashboard-chat-main .chat-empty-state {
+  color: #849495;
+}
+
+@media (max-width: 900px) {
+  #view-jarvis.dashboard-chat-layout {
+    flex-direction: column;
+  }
+
+  .dashboard-conversation-sidebar {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    max-height: 18rem;
+  }
+
+  .conversation-history-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    align-content: start;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .conversation-history-title {
+    color: #0f172a;
+  }
+
+  .conversation-history-preview {
+    color: #475569;
+  }
+}
+
+html.light-mode .conversation-history-title {
+  color: #0f172a;
+}
+
+html.light-mode .conversation-history-preview {
+  color: #475569;
+}

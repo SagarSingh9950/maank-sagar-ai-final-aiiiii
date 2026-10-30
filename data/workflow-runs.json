@@ -1,0 +1,133 @@
+[
+  {
+    "runId": "efba5a72-4be3-471c-a1c6-3e1579c86115",
+    "workflowId": "research-study",
+    "workflowVersion": "1.0.0",
+    "inputs": {
+      "topic": "Artificial intelligence",
+      "focus": "Personal assistants"
+    },
+    "status": "ready",
+    "createdAt": "2026-10-12T15:37:48.873Z",
+    "updatedAt": "2026-10-12T15:37:48.878Z",
+    "steps": [
+      {
+        "stepId": "search",
+        "tool": "web_search",
+        "state": "succeeded",
+        "attempts": 1,
+        "maxAttempts": 2,
+        "dependsOn": [],
+        "approval": "none",
+        "capabilityStatus": "available",
+        "result": {
+          "test": true
+        },
+        "error": null
+      },
+      {
+        "stepId": "summarize",
+        "tool": "llm_summarize",
+        "state": "pending",
+        "attempts": 0,
+        "maxAttempts": 2,
+        "dependsOn": [
+          "search"
+        ],
+        "approval": "none",
+        "capabilityStatus": "available",
+        "result": null,
+        "error": null
+      },
+      {
+        "stepId": "organize_notes",
+        "tool": "llm_format_notes",
+        "state": "pending",
+        "attempts": 0,
+        "maxAttempts": 2,
+        "dependsOn": [
+          "summarize"
+        ],
+        "approval": "none",
+        "capabilityStatus": "available",
+        "result": null,
+        "error": null
+      },
+      {
+        "stepId": "save_notes",
+        "tool": "save_notes",
+        "state": "pending",
+        "attempts": 0,
+        "maxAttempts": 2,
+        "dependsOn": [
+          "organize_notes"
+        ],
+        "approval": "required",
+        "capabilityStatus": "not_implemented",
+        "result": null,
+        "error": null
+      }
+    ]
+  },
+  {
+    "runId": "2408eef8-f7d8-4d89-b725-7bce4f5730f4",
+    "workflowId": "calculation-explainer",
+    "workflowVersion": "1.0.0",
+    "inputs": {
+      "expression": "12 * 8"
+    },
+    "status": "failed",
+    "createdAt": "2026-10-22T18:58:34.453Z",
+    "updatedAt": "2026-10-22T18:58:34.685Z",
+    "steps": [
+      {
+        "stepId": "calculate",
+        "tool": "calculator",
+        "state": "succeeded",
+        "attempts": 1,
+        "maxAttempts": 2,
+        "dependsOn": [],
+        "approval": "none",
+        "capabilityStatus": "available",
+        "result": 96,
+        "error": null
+      },
+      {
+        "stepId": "verify",
+        "tool": "llm_verify_calculation",
+        "state": "failed",
+        "attempts": 2,
+        "maxAttempts": 2,
+        "dependsOn": [
+          "calculate"
+        ],
+        "approval": "none",
+        "capabilityStatus": "available",
+        "result": null,
+        "error": "Workflow tool is not implemented: llm_verify_calculation"
+      },
+      {
+        "stepId": "explain",
+        "tool": "llm_explain",
+        "state": "pending",
+        "attempts": 0,
+        "maxAttempts": 2,
+        "dependsOn": [
+          "verify"
+        ],
+        "approval": "none",
+        "capabilityStatus": "available",
+        "result": null,
+        "error": null
+      }
+    ]
+  },
+  {
+    "runId": "restart-test-run",
+    "workflowId": "research-study",
+    "status": "completed",
+    "createdAt": "2026-10-22T21:08:32.298Z",
+    "updatedAt": "2026-10-22T21:08:32.298Z",
+    "steps": []
+  }
+]

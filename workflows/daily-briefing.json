@@ -1,0 +1,61 @@
+{
+  "successCriteria": [
+    "Requested topics researched",
+    "Briefing prepared"
+  ],
+  "steps": [
+    {
+      "approval": "none",
+      "dependsOn": [],
+      "tool": "date_time",
+      "id": "get_datetime"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "get_datetime"
+      ],
+      "tool": "web_search",
+      "id": "research_topics"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "research_topics"
+      ],
+      "tool": "llm_summarize",
+      "id": "prepare_briefing"
+    }
+  ],
+  "name": "Daily Briefing",
+  "inputs": [
+    {
+      "name": "topics",
+      "type": "array",
+      "required": true
+    }
+  ],
+  "version": "1.0.0",
+  "id": "daily-briefing",
+  "description": "Prepare a briefing using the date, time, and requested current information.",
+  "allowedTools": [
+    "date_time",
+    "web_search",
+    "llm_summarize"
+  ],
+  "status": "ready",
+  "successChecks": [
+    {
+      "id": "research-results-collected",
+      "stepId": "research_topics",
+      "path": "$",
+      "type": "non_empty_array"
+    },
+    {
+      "id": "briefing-prepared",
+      "stepId": "prepare_briefing",
+      "path": "text",
+      "type": "non_empty_string"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "successCriteria": [
+    "Files inspected",
+    "Organization plan prepared",
+    "Changes approved before execution"
+  ],
+  "steps": [
+    {
+      "approval": "none",
+      "action": "list",
+      "dependsOn": [],
+      "tool": "file_manager",
+      "id": "list_files"
+    },
+    {
+      "approval": "none",
+      "action": "info",
+      "dependsOn": [
+        "list_files"
+      ],
+      "tool": "file_manager",
+      "id": "inspect_files"
+    },
+    {
+      "approval": "none",
+      "dependsOn": [
+        "inspect_files"
+      ],
+      "tool": "file_manager",
+      "id": "prepare_plan",
+      "action": "plan"
+    },
+    {
+      "approval": "required",
+      "dependsOn": [
+        "prepare_plan"
+      ],
+      "capabilityStatus": "available",
+      "tool": "file_manager_move",
+      "id": "apply_changes",
+      "approvalPreviewFrom": "prepare_plan"
+    }
+  ],
+  "name": "File Organizer",
+  "inputs": [
+    {
+      "name": "directory",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "goal",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "version": "1.0.0",
+  "id": "file-organizer",
+  "description": "Safely inspect a project, preview file moves, and apply them only after approval.",
+  "allowedTools": [
+    "file_manager",
+    "file_manager_move"
+  ],
+  "status": "ready",
+  "successChecks": [
+    {
+      "id": "files-listed",
+      "stepId": "list_files",
+      "path": "$",
+      "type": "array"
+    },
+    {
+      "id": "file-metadata-inspected",
+      "stepId": "inspect_files",
+      "path": "$",
+      "type": "array"
+    },
+    {
+      "id": "organization-plan-created",
+      "stepId": "prepare_plan",
+      "path": "moves",
+      "type": "array"
+    }
+  ]
+}

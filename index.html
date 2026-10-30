@@ -1,0 +1,1427 @@
+<!DOCTYPE html><html class="dark" lang="en" style="width: 1280px; height: 1024px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Boldonse:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+/* Comprehensive Light Mode Overrides */
+html.light-mode body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+html.light-mode aside {
+  background-color: #ffffff !important;
+  border-right: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(0,0,0,0.05);
+}
+html.light-mode header {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid #e2e8f0;
+}
+html.light-mode main {
+  background-color: #f8fafc !important;
+}
+html.light-mode .text-primary {
+  color: #0891b2 !important;
+}
+html.light-mode .text-on-surface {
+  color: #0f172a !important;
+}
+html.light-mode .text-on-surface-variant {
+  color: #475569 !important;
+}
+html.light-mode .bg-surface-container-low,
+html.light-mode .bg-surface-container-lowest {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+html.light-mode .bg-surface-container {
+  background-color: #f1f5f9 !important;
+  border: 1px solid #e2e8f0;
+}
+html.light-mode .bg-surface-container-high,
+html.light-mode .bg-surface-container-highest {
+  background-color: #e2e8f0 !important;
+}
+html.light-mode .border-surface-container-highest {
+  border-color: #e2e8f0 !important;
+}
+html.light-mode aside nav a.text-on-surface-variant {
+  color: #64748b !important;
+}
+html.light-mode aside nav a.text-on-surface-variant:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+html.light-mode aside nav a.bg-surface-container-high {
+  background-color: #e0f2fe !important;
+  color: #0284c7 !important;
+  box-shadow: 0 1px 3px rgba(2, 132, 199, 0.15) !important;
+}
+html.light-mode input,
+html.light-mode select,
+html.light-mode textarea {
+  color: #0f172a !important;
+}
+html.light-mode pre {
+  background-color: #f1f5f9 !important;
+  color: #0369a1 !important;
+  border: 1px solid #e2e8f0;
+}
+html.light-mode .text-primary-fixed-dim {
+  color: #0284c7 !important;
+}
+html.light-mode #view-jarvis h1 {
+  color: #0f172a !important;
+  text-shadow: 0 2px 10px rgba(0, 242, 254, 0.2);
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary":"#2d3038","tertiary-fixed-dim":"#c4c6d0","error":"#ffb4ab","on-tertiary-fixed":"#191c22","surface":"#111317","primary-fixed":"#6ff6ff","tertiary":"#f6f6ff","on-primary-fixed-variant":"#004f53","on-error-container":"#ffdad6","surface-bright":"#37393d","primary-fixed-dim":"#00dce6","inverse-surface":"#e2e2e6","surface-container-highest":"#333538","on-surface-variant":"#b9cacb","surface-container-lowest":"#0c0e11","on-surface":"#e2e2e6","surface-dim":"#111317","on-tertiary-fixed-variant":"#44474f","on-error":"#690005","secondary-fixed-dim":"#9bcbff","on-secondary":"#003256","secondary-fixed":"#d0e4ff","surface-tint":"#00dce6","surface-container-high":"#282a2d","on-tertiary-container":"#5d5f68","error-container":"#93000a","tertiary-fixed":"#e0e2ec","on-secondary-container":"#002c4b","surface-variant":"#333538","on-primary-container":"#006a70","inverse-on-surface":"#2f3034","outline":"#849495","background":"#111317","on-primary-fixed":"#002022","secondary-container":"#3196e6","outline-variant":"#3a494b","primary-container":"#00f2fe","surface-container":"#1e2023","on-primary":"#00373a","on-secondary-fixed-variant":"#004a7a","inverse-primary":"#00696f","on-background":"#e2e2e6","surface-container-low":"#1a1c1f","primary":"#e0fdff","tertiary-container":"#d9dae4","on-secondary-fixed":"#001d34","secondary":"#9bcbff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","margin":"1.5rem","space-xs":"0.25rem","gutter":"1rem","space-md":"1rem","space-xl":"2.5rem","space-sm":"0.5rem"},fontFamily:{"body-lg":["Boldonse"],"headline-xl":["Boldonse"],"label-md":["Boldonse"],"body-md":["Boldonse"],"headline-md":["Boldonse"],"headline-sm":["Boldonse"],"headline-lg-mobile":["Boldonse"],"headline-lg":["Boldonse"],"body-sm":["Boldonse"],"label-sm":["Boldonse"]},fontSize:{"body-lg":["14px",{"lineHeight":"22px","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"500"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased transition-colors duration-200"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-md"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-surface-container"><span class="material-symbols-outlined text-primary-fixed-dim">hub</span><div class="absolute w-2 h-2 rounded-full bg-primary-container -top-0.5 -right-0.5 animate-pulse"></div></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary font-semibold tracking-wide">SNABBLER. AI</span><span class="font-label-sm text-label-sm text-primary-fixed-dim tracking-widest">SPARK CORE</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-surface-container-high text-primary font-medium shadow-[0_0_16px_-4px_rgba(0,242,254,0.25)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all hover:bg-surface-container-high hover:text-on-surface bg-surface-container-high text-primary font-medium shadow-[0_0_16px_-4px_rgba(0,242,254,0.25)]" data-path="jarvis-core" href="#"><span class="material-symbols-outlined">smart_toy</span><span class="font-body-md text-body-md">Jarvis Core</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all text-on-surface-variant" data-path="workflow-history" href="#"><span class="material-symbols-outlined">history</span><span class="font-body-md text-body-md">Workflow History</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all text-on-surface-variant" data-path="workflow-studio" href="#"><span class="material-symbols-outlined">account_tree</span><span class="font-body-md text-body-md">Workflow Studio</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all text-on-surface-variant" data-path="project-tools" href="#"><span class="material-symbols-outlined">home_repair_service</span><span class="font-body-md text-body-md">Project tools</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all text-on-surface-variant" data-path="memory-store" href="#"><span class="material-symbols-outlined">memory</span><span class="font-body-md text-body-md">Memory Store</span></a></nav></div><div class="flex flex-col gap-space-sm px-space-md"><div class="flex flex-col gap-1.5 p-1 rounded-xl bg-surface-container border border-surface-container-highest"><span class="font-label-sm text-label-sm text-on-surface-variant px-1.5 pt-0.5 tracking-wider uppercase font-semibold">Appearance</span><div class="grid grid-cols-2 gap-1 p-0.5 rounded-lg bg-surface-container-lowest" id="theme-toggle-group"><button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md font-label-md text-label-md transition-all font-semibold bg-surface-container-high text-primary shadow-[0_0_12px_rgba(0,242,254,0.25)]" id="btn-theme-dark" onclick="switchTheme('dark')" type="button"><span class="material-symbols-outlined text-[16px]">dark_mode</span><span class="">Dark</span></button><button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="btn-theme-light" onclick="switchTheme('light')" type="button"><span class="material-symbols-outlined text-[16px]">light_mode</span><span class="">Light</span></button></div></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container"><div class="flex items-center gap-space-xs"><div class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-ping"></div><span class="font-label-sm text-label-sm text-on-surface-variant">V2.4.0-NEXUS</span></div><div class="flex items-center bg-surface-container-highest rounded-full p-space-xs"><span class="material-symbols-outlined text-primary-fixed-dim text-body-sm">sync</span></div></div></div></aside>
+<div class="pl-64"><main class="w-full pt-16 bg-surface px-space-lg"><div class="flex flex-col w-full pb-8">
+<!-- JARVIS CORE VIEW -->
+<div class="dashboard-view dashboard-chat-layout w-full min-h-[calc(100vh-6rem)] flex" id="view-jarvis">
+<div class="dashboard-chat-main flex min-w-0 flex-1 flex-col items-center justify-between">
+<div class="flex flex-col items-center justify-center my-auto py-6">
+<div class="relative w-80 h-80 flex items-center justify-center mb-6">
+<div class="absolute inset-0 rounded-full bg-primary-container/15 filter blur-3xl animate-pulse"></div>
+<div class="absolute inset-6 rounded-full bg-secondary-container/15 filter blur-2xl"></div>
+<div class="absolute inset-16 rounded-full bg-primary-fixed-dim/20 filter blur-xl animate-pulse" style="animation-duration: 2.5s;"></div>
+<svg class="absolute inset-0 w-full h-full animate-[spin_24s_linear_infinite]" viewBox="0 0 320 320">
+<defs>
+<linearGradient id="cyanGrad1" x1="0%" x2="100%" y1="0%">
+<stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"></stop>
+<stop offset="50%" stop-color="#00dce6" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#3196e6" stop-opacity="0.6"></stop>
+</linearGradient>
+</defs>
+<circle class="text-primary-fixed-dim/25" cx="160" cy="160" fill="none" r="152" stroke="currentColor" stroke-dasharray="4 8" stroke-width="1.5"></circle>
+<circle cx="160" cy="160" fill="none" r="152" stroke="url(#cyanGrad1)" stroke-dasharray="70 120 40 90" stroke-linecap="round" stroke-width="2.5"></circle>
+<circle class="fill-primary-container shadow-[0_0_12px_#00f2fe]" cx="160" cy="8" r="4"></circle>
+<circle class="fill-primary-container/30 animate-ping" cx="160" cy="8" r="8"></circle>
+<circle class="fill-secondary-fixed shadow-[0_0_8px_#d0e4ff]" cx="312" cy="160" r="3"></circle>
+<circle class="fill-primary-fixed-dim" cx="8" cy="160" r="2.5"></circle>
+</svg>
+<svg class="absolute inset-3 w-[calc(100%-1.5rem)] h-[calc(100%-1.5rem)] animate-[spin_14s_linear_infinite_reverse]" viewBox="0 0 300 300">
+<circle class="text-primary-container/35" cx="150" cy="150" fill="none" r="132" stroke="currentColor" stroke-dasharray="12 16" stroke-linecap="round" stroke-width="1.5"></circle>
+<circle class="text-secondary/20" cx="150" cy="150" fill="none" r="120" stroke="currentColor" stroke-dasharray="2 6" stroke-width="1"></circle>
+<circle class="drop-shadow-[0_0_8px_rgba(0,242,254,0.7)]" cx="150" cy="150" fill="none" r="132" stroke="#00f2fe" stroke-dasharray="35 80" stroke-linecap="round" stroke-width="2"></circle>
+<circle class="fill-primary shadow-[0_0_10px_#00f2fe]" cx="243" cy="57" r="3.5"></circle>
+<circle class="fill-primary-fixed-dim shadow-[0_0_10px_#00dce6]" cx="57" cy="243" r="3.5"></circle>
+<circle class="fill-secondary-fixed" cx="267" cy="180" r="2"></circle>
+</svg>
+<svg class="absolute inset-8 w-[calc(100%-4rem)] h-[calc(100%-4rem)] animate-[spin_8s_linear_infinite]" viewBox="0 0 240 240">
+<circle class="text-primary-fixed-dim/30" cx="120" cy="120" fill="none" r="102" stroke="currentColor" stroke-dasharray="6 10" stroke-width="1.5"></circle>
+<circle class="drop-shadow-[0_0_10px_rgba(0,242,254,0.6)]" cx="120" cy="120" fill="none" r="90" stroke="#00f2fe" stroke-dasharray="50 110" stroke-linecap="round" stroke-width="2"></circle>
+<circle class="fill-primary shadow-[0_0_8px_#00f2fe]" cx="120" cy="30" r="3"></circle>
+<circle class="fill-primary-fixed-dim" cx="120" cy="210" r="2.5"></circle>
+</svg>
+<div class="absolute w-60 h-60 rounded-full border border-primary-container/40 animate-ping" style="animation-duration: 4s;"></div>
+<div class="absolute w-48 h-48 rounded-full border border-primary-fixed-dim/50 shadow-[0_0_16px_rgba(0,242,254,0.3)] animate-pulse"></div>
+<div class="relative w-36 h-36 rounded-2xl bg-gradient-to-tr from-surface-container-lowest via-surface-container-high to-surface-container-highest shadow-[0_0_36px_-6px_rgba(0,242,254,0.55)] flex items-center justify-center group border border-primary-container/30 z-10">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-secondary-container/25"></div>
+<div class="absolute -inset-1 bg-gradient-to-r from-primary-fixed-dim via-transparent to-primary-container opacity-40 blur-sm animate-pulse"></div>
+</div>
+<div class="" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 20; pointer-events: none; font-size: 5rem; font-weight: 700; color: rgb(255, 255, 255); text-shadow: rgba(0, 242, 254, 0.9) 0px 0px 20px, rgba(0, 242, 254, 0.5) 0px 0px 40px; font-family: &quot;Cormorant Garamond&quot;, serif; line-height: 1; user-select: none;">V</div></div>
+<div class="text-center flex flex-col items-center gap-1.5">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight font-bold drop-shadow-[0_0_18px_rgba(0,242,254,0.3)]">
+          VICTUS CORE
+        </h1>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim animate-ping"></span>
+<p class="font-label-md text-label-md text-primary-fixed-dim tracking-[0.25em] uppercase font-semibold">
+            LET'S SPARK • READY
+          </p>
+</div>
+</div>
+</div>
+<div class="w-full max-w-4xl mx-auto flex flex-col gap-2.5 mt-auto">
+<div class="w-full bg-surface-container-low rounded-xl p-3 shadow-md flex flex-col gap-2">
+<div class="flex flex-col gap-2 px-2 pt-1"><div class="flex flex-wrap items-center gap-2 empty:hidden" id="active-attachments-list"></div></div>
+<div class="flex items-center gap-2 bg-surface-container rounded-lg p-2">
+<span class="material-symbols-outlined text-primary-fixed-dim pl-1">psychology</span>
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-on-surface-variant/60" id="prompt-input" placeholder="Enter directive or query for VICTUS CORE, or attach files..." type="text">
+<button class="px-4 py-2 rounded-lg bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center gap-1.5 shadow-[0_0_12px_rgba(0,242,254,0.35)] transition-all" onclick="handleDispatch()">
+<span class="">Send</span>
+<span class="material-symbols-outlined text-base">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<aside class="dashboard-conversation-sidebar rounded-xl bg-surface-container-low p-4 flex flex-col" aria-label="Conversation history">
+  <div class="conversation-sidebar-heading">
+    <div>
+      <h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Conversations</h2>
+      <p class="text-body-sm text-on-surface-variant">Pick up where you left off</p>
+    </div>
+    <button class="conversation-new-button" id="dashboard-chat-new" type="button" aria-label="Start a new conversation" title="Start a new conversation">
+      <span class="material-symbols-outlined">add</span>
+    </button>
+  </div>
+  <div class="conversation-history-list" id="dashboard-conversation-list" aria-live="polite"></div>
+</aside>
+</div>
+<!-- WORKFLOW HISTORY VIEW -->
+<div class="dashboard-view flex-col w-full gap-4 hidden" id="view-history">
+<div class="flex items-center justify-between pb-2">
+<div class="flex flex-col">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-wide flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim">history</span>
+          Workflow History
+        </h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface text-label-md font-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">filter_list</span>
+          Filter Runs
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary-container text-label-md font-label-md font-semibold hover:bg-primary-fixed-dim transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base">refresh</span>
+          Live Stream
+        </button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4">
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-2.5">
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Total Runs: 1,482</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">All telemetry synchronized</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="p-4 rounded-xl bg-surface-container-high cursor-pointer transition-all hover:bg-surface-container-highest flex flex-col gap-2 shadow-sm" id="hist-card-calc" onclick="selectHistory('calc')">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Calculation Explainer</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container-lowest px-2 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span>
+                Completed
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Run ID: #RUN-90218 • Duration: 242ms</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80">3 mins ago</span>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" onclick="event.stopPropagation(); deleteHistoryItem(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container-high flex flex-col gap-2" id="hist-card-file" onclick="selectHistory('file')">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">File Organizer</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container px-2 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span>
+                Completed
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Run ID: #RUN-90217 • Duration: 1.14s</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80">42 mins ago</span>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" onclick="event.stopPropagation(); deleteHistoryItem(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container-high flex flex-col gap-2" id="hist-card-proj" onclick="selectHistory('proj')">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Project Assistant</span>
+<span class="font-label-sm text-label-sm text-error bg-error-container/40 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Failed
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Run ID: #RUN-90214 • Timeout at step 4</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80">2 hours ago</span>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" onclick="event.stopPropagation(); deleteHistoryItem(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container-high flex flex-col gap-2" id="hist-card-sys" onclick="selectHistory('sys')">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">System Check</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+                Cancelled
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Run ID: #RUN-90209 • User interrupted</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant/80">Yesterday</span>
+<button class="text-on-surface-variant hover:text-error transition-colors p-1" onclick="event.stopPropagation(); deleteHistoryItem(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-3 bg-surface-container-low p-5 rounded-xl">
+<div class="flex items-center justify-between border-b pb-3 border-surface-container-highest">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider">Run Inspector</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold" id="hist-detail-title">CALCULATION EXPLAINER</h3>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-base">replay</span>
+              Rerun
+            </button>
+<button class="px-3 py-1.5 rounded-lg bg-error-container text-on-error-container font-label-md text-label-md hover:opacity-90 transition-opacity flex items-center gap-1">
+<span class="material-symbols-outlined text-base">delete</span>
+              Delete Run
+            </button>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="bg-surface-container p-3 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Execution ID</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold" id="hist-detail-id">#RUN-90218</span>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Duration</span>
+<span class="font-body-md text-body-md text-primary-fixed font-semibold" id="hist-detail-dur">242.18 ms</span>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Outcome</span>
+<span class="font-body-md text-body-md text-primary-fixed-dim font-semibold" id="hist-detail-outcome">Verified 100%</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5 mt-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Step Derivation &amp; Microsecond Trace</span>
+<div class="bg-surface-container-lowest p-3.5 rounded-lg flex flex-col gap-2 font-mono text-body-sm text-on-surface-variant overflow-x-auto">
+<div class="flex items-center justify-between text-label-sm text-primary-fixed-dim">
+<span class="">[00:00:00.012] AGENT_INITIALIZE</span>
+<span class="text-on-surface-variant">MEM: 14.2MB</span>
+</div>
+<p class="text-on-surface font-body-sm pl-2">Parsing mathematical equation matrix and symbol tokens...</p>
+<div class="flex items-center justify-between text-label-sm text-primary-fixed-dim">
+<span class="">[00:00:00.098] EVALUATE_AST</span>
+<span class="text-on-surface-variant">PASS</span>
+</div>
+<pre class="bg-surface-container p-2.5 rounded text-primary text-label-md leading-relaxed whitespace-pre-wrap">{
+  "expression": "integral(3*x^2 + 2*x, x, 0, 4)",
+  "solution": "x^3 + x^2 | [0, 4] = 64 + 16 = 80",
+  "confidence": 0.99984
+}</pre>
+<div class="flex items-center justify-between text-label-sm text-primary-fixed-dim">
+<span class="">[00:00:00.242] DISPATCH_FINAL_PAYLOAD</span>
+<span class="text-primary-fixed-dim">SUCCESS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- WORKFLOW STUDIO VIEW (VIEW #3) -->
+<div class="dashboard-view flex-col w-full gap-4 hidden" id="view-studio">
+<div class="flex items-center justify-between pb-2">
+<div class="flex flex-col">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-wide flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim">account_tree</span>
+          Workflow Studio
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Inspect, chain, and execute multi-agent autonomous modules.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface text-label-md font-label-md hover:bg-surface-container-highest transition-colors flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">add</span>
+          Create Workflow
+        </button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4">
+<!-- LEFT COLUMN: AVAILABLE WORKFLOWS -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-2">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Available Workflows (7)</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-mono">AUTONOMOUS RUNNERS</span>
+</div>
+<div class="flex flex-col gap-2" id="studio-workflow-list">
+<div class="p-3.5 rounded-xl hover:bg-surface-container-highest cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-high shadow-sm border-primary-container/30" onclick="selectStudioWorkflow('System Check')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim">verified</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-primary">System Check</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full hardware and daemon telemetry</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container px-2 py-0.5 rounded font-mono">v2.5.0</span>
+</div>
+<div class="p-3.5 rounded-xl hover:bg-surface-container-high cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-low border-transparent" onclick="selectStudioWorkflow('Calculation Explainer')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">calculate</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-on-surface">Calculation Explainer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Formal proof derivation and math solver</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">v1.8.2</span>
+</div>
+<div class="p-3.5 rounded-xl hover:bg-surface-container-high cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-low border-transparent" onclick="selectStudioWorkflow('Daily Briefing')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">today</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-on-surface">Daily Briefing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">RSS feeds, git pull requests, and meetings</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">v3.0.1</span>
+</div>
+<div class="p-3.5 rounded-xl hover:bg-surface-container-high cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-low border-transparent" onclick="selectStudioWorkflow('File Organizer')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">folder_zip</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-on-surface">File Organizer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classify and prune file pipelines</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">v1.2.0</span>
+</div>
+<div class="p-3.5 rounded-xl hover:bg-surface-container-high cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-low border-transparent" onclick="selectStudioWorkflow('Goal Planning')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">flag</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-on-surface">Goal Planning</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Milestone break down with critical paths</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">v2.1.0</span>
+</div>
+<div class="p-3.5 rounded-xl hover:bg-surface-container-high cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-low border-transparent" onclick="selectStudioWorkflow('Project Assistant')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">assignment</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-on-surface">Project Assistant</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kanban updates and release synthesis</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">v2.4.0</span>
+</div>
+<div class="p-3.5 rounded-xl hover:bg-surface-container-high cursor-pointer transition-all flex items-center justify-between border hover:border-primary-container/20 bg-surface-container-low border-transparent" onclick="selectStudioWorkflow('Research &amp; Study')">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant">menu_book</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-medium text-on-surface">Research &amp; Study</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Semantic scholar and arxiv summarizer</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded font-mono">v1.9.4</span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: CONFIGURATION INSPECTOR & PIPELINE RUNNER -->
+<div class="col-span-12 lg:col-span-7 flex flex-col gap-4 bg-surface-container-low p-5 rounded-xl border border-surface-container-highest/60">
+<div class="flex flex-col gap-5 p-1" id="studio-panel-content">
+<!-- Header Section -->
+<div class="flex items-start justify-between border-b border-surface-container-highest/60 pb-3">
+<div class="flex flex-col gap-1">
+<span class="text-[11px] font-semibold tracking-widest uppercase text-amber-500/90 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+        CONFIGURE
+      </span>
+<div class="flex items-center gap-2.5">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight" id="studio-title">System Check</h3>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full border border-primary-container/40 text-primary-fixed-dim bg-primary-container/15 flex items-center gap-1.5 hidden" id="studio-status-badge">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400" id="studio-status-badge-dot"></span>
+<span class="" id="studio-status-badge-text">Completed</span>
+</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="border border-surface-container-highest px-2.5 py-1 rounded-lg text-label-sm font-label-sm text-on-surface-variant font-mono bg-surface-container-lowest" id="studio-version-tag">v2.5.0</span>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="resetStudioWorkflow()" title="Reset Configuration">
+<span class="material-symbols-outlined text-base">refresh</span>
+</button>
+</div>
+</div>
+<!-- Description -->
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed" id="studio-description">Collect available system information, verify daemon latency, monitor cluster heatmaps, and synthesize telemetry diagnostics.</p>
+<!-- Steps Section -->
+<div class="flex flex-col items-center gap-3 py-1" id="studio-steps-container">
+<div class="flex items-center justify-between w-full max-w-md px-1">
+<h4 class="text-headline-sm font-semibold text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-fixed-dim text-base">linear_scale</span>
+        Execution Pipeline Steps
+      </h4>
+<span class="text-label-sm font-label-sm text-on-surface-variant/70 font-mono" id="pipeline-total-steps">2 STEPS</span>
+</div>
+<!-- Steps list populated dynamically -->
+<div class="flex flex-col items-center gap-2.5 w-full max-w-md" id="studio-steps-list"><div id="studio-step-1" class="flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-surface-container-highest/40 bg-surface-container-lowest/50">
+        <span id="studio-step-1-badge" class="w-8 h-8 rounded-full bg-surface-container-highest/60 border border-surface-container-highest flex items-center justify-center text-label-sm text-on-surface-variant font-mono font-medium shrink-0 transition-all">1</span>
+        <div class="flex flex-col flex-1">
+          <span class="text-body-md font-semibold text-on-surface" id="studio-step-1-name">collect_system_info</span>
+          <span class="text-label-sm text-on-surface-variant/70 font-mono" id="studio-step-1-sub">module: hardware_telemetry</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="studio-step-1-dur" class="text-label-sm font-mono text-primary-fixed-dim hidden"></span>
+          <span id="studio-step-1-state" class="text-label-sm text-on-surface-variant/50 material-symbols-outlined text-base">radio_button_unchecked</span>
+        </div>
+      </div><div id="studio-step-2" class="flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-surface-container-highest/40 bg-surface-container-lowest/50">
+        <span id="studio-step-2-badge" class="w-8 h-8 rounded-full bg-surface-container-highest/60 border border-surface-container-highest flex items-center justify-center text-label-sm text-on-surface-variant font-mono font-medium shrink-0 transition-all">2</span>
+        <div class="flex flex-col flex-1">
+          <span class="text-body-md font-semibold text-on-surface" id="studio-step-2-name">summarize_system_info</span>
+          <span class="text-label-sm text-on-surface-variant/70 font-mono" id="studio-step-2-sub">agent: llm_diagnostician</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="studio-step-2-dur" class="text-label-sm font-mono text-primary-fixed-dim hidden"></span>
+          <span id="studio-step-2-state" class="text-label-sm text-on-surface-variant/50 material-symbols-outlined text-base">radio_button_unchecked</span>
+        </div>
+      </div></div>
+</div>
+<!-- Inputs Section -->
+<div class="flex flex-col gap-2 pt-1" id="studio-inputs-container">
+<div class="flex items-center justify-between text-body-sm px-1">
+<span class="text-on-surface font-semibold flex items-center gap-1.5" id="studio-input-label"><span class="material-symbols-outlined text-primary-fixed-dim text-base">tune</span>Target Subsystem / Filter</span>
+<span class="text-on-surface-variant/70 text-label-sm font-mono" id="studio-input-meta">Optional · string</span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl p-3.5 pr-20 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary-container/60 transition-colors text-body-md font-mono" id="studio-input-field" onkeydown="if(event.key==='Enter') triggerStudioRun();" placeholder="e.g. ALL_DAEMONS, CPU_MEM, NETWORK" type="text" value="SYS_ALL_HARDWARE">
+<button class="absolute right-2 px-2.5 py-1 rounded-lg bg-surface-container text-on-surface-variant hover:text-primary hover:bg-surface-container-high text-label-sm font-label-sm font-mono transition-colors" onclick="resetInputField()" title="Reset parameter">Reset</button>
+</div>
+</div>
+<!-- Action Controls -->
+<div class="pt-2 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<button class="flex-1 py-3 px-4 rounded-xl bg-on-surface hover:opacity-90 active:scale-[0.99] text-surface font-semibold text-body-md flex items-center justify-center gap-2 transition-all shadow-[0_0_16px_rgba(255,255,255,0.1)]" id="studio-cta-btn" onclick="triggerStudioRun()">
+<span class="material-symbols-outlined text-base" id="studio-cta-icon">play_arrow</span>
+<span class="" id="studio-cta-text">Start workflow</span>
+<span class="text-base font-bold" id="studio-cta-arrow">↗</span>
+</button>
+<button class="py-3 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-label-md font-label-md font-medium items-center gap-1.5 transition-all border border-surface-container-highest hidden" id="studio-clear-btn" onclick="clearStudioOutput()">
+<span class="material-symbols-outlined text-base">clear_all</span>
+<span class="">Clear</span>
+</button>
+</div>
+<!-- Live Execution & Telemetry Feedback Container -->
+<div class="p-4 rounded-xl bg-surface-container border-l-4 border-primary-container flex flex-col gap-3 transition-all shadow-md hidden" id="studio-status">
+<div class="flex items-center justify-between border-b border-surface-container-highest/60 pb-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400 text-base" id="studio-status-icon">verified</span>
+<span class="font-headline-sm text-body-md text-primary font-semibold" id="studio-status-headline">Execution Complete (200 OK)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono text-label-sm text-primary-fixed-dim bg-surface-container-highest px-2 py-0.5 rounded" id="studio-status-timer">1.76s</span>
+<span class="text-label-sm text-on-surface-variant font-mono bg-surface-container-lowest px-2 py-0.5 rounded border border-surface-container-highest/60" id="studio-node-tag">CLUSTER #4</span>
+</div>
+</div>
+<p class="text-body-sm text-on-surface-variant leading-relaxed" id="studio-status-desc">Workflow pipeline successfully terminated in 1.76s. Telemetry synced.</p>
+<!-- Step Logs Stream -->
+<div class="flex flex-col gap-1 font-mono text-label-sm text-on-surface-variant/80 bg-surface-container-lowest/80 p-2.5 rounded-lg border border-surface-container-highest/40" id="studio-live-log-container">
+<div class="flex items-center justify-between text-primary-fixed-dim border-b border-surface-container-highest/30 pb-1 mb-1">
+<span class="font-semibold uppercase tracking-wider text-[10px]">Realtime Subsystem Trace</span>
+<span class="text-[10px] text-on-surface-variant/70">PIPE://SYNC</span>
+</div>
+<div class="flex flex-col gap-1 max-h-28 overflow-y-auto pr-1" id="studio-live-logs"><div class="flex items-center justify-between text-body-sm text-primary font-semibold"><span class="">[05:57:29.072] WORKFLOW_INITIALIZED: Research &amp; Study</span></div><div class="flex items-center justify-between text-body-sm text-on-surface-variant"><span class="">[05:57:29.074] INPUT_PARAM: Multi-agent latent reasoning latency</span></div><div class="flex items-center justify-between text-body-sm text-on-surface-variant"><span class="">[05:57:29.077] STEP_1_START: query_arxiv_citations (module: arxiv_scholar_api)</span></div><div class="flex items-center justify-between text-body-sm text-primary font-semibold"><span class="">[05:57:29.881] STEP_1_COMPLETED: duration=185ms, status=PASS</span></div><div class="flex items-center justify-between text-body-sm text-on-surface-variant"><span class="">[05:57:29.883] STEP_2_START: synthesize_abstracts (agent: research_synthesizer)</span></div><div class="flex items-center justify-between text-body-sm text-primary font-semibold"><span class="">[05:57:30.837] STEP_2_COMPLETED: duration=320ms, status=PASS</span></div><div class="flex items-center justify-between text-body-sm text-primary font-semibold"><span class="">[05:57:30.838] DISPATCH_PAYLOAD_SUCCESS: total_latency=1.76s</span></div></div>
+</div>
+<!-- Rich Telemetry & Structured Output Result View -->
+<div class="flex-col gap-2 mt-1 hidden" id="studio-telemetry-result-wrapper">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-wider font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">terminal</span>
+            Synthesized Execution Payload
+          </span>
+<div class="flex items-center gap-2">
+<button class="text-label-sm text-on-surface-variant hover:text-primary font-mono transition-colors" onclick="copyStudioResult()" title="Copy JSON payload">Copy Payload</button>
+<span class="text-on-surface-variant/40">|</span>
+<span class="text-label-sm text-primary-fixed-dim font-mono" id="studio-result-status-tag">STATUS: 200 OK</span>
+</div>
+</div>
+<pre class="p-3 rounded-lg bg-surface-container-lowest border border-surface-container-highest font-mono text-label-md text-primary leading-relaxed overflow-x-auto whitespace-pre-wrap select-text" id="studio-telemetry-result">{<br>  "query_terms": "Multi-agent latent reasoning latency",<br>  "papers_queried": 38,<br>  "selected_citations": 5,<br>  "literature_consensus": "Strong empirical trend toward sparse distributed graphs over monolithic prompt routing.",<br>  "top_references": [<br>    "ArXiv:2403.09112 - Latency Bounds in Distributed LLM DAGs",<br>    "IEEE CS 2024 - Parallelized Context Sharing in Autonomous Swarms"<br>  ],<br>  "status": "SYNTHESIS_COMPLETE"<br>}</pre>
+<!-- Synthesis Summary Card -->
+<div class="p-2.5 rounded-lg bg-surface-container-highest/40 border border-surface-container-highest flex items-start gap-2.5 mt-1" id="studio-summary-card">
+<span class="material-symbols-outlined text-primary-fixed-dim text-base mt-0.5">insights</span>
+<div class="flex flex-col">
+<span class="text-label-sm font-semibold text-primary uppercase tracking-wide">VICTUS AGENT SYNTHESIS</span>
+<p class="text-body-sm text-on-surface mt-0.5 leading-snug" id="studio-summary-text">Literature review synthesized for [Multi-agent latent reasoning latency]. 38 papers parsed, top 5 citations extracted.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MEMORY STORE VIEW -->
+<div class="dashboard-view flex-col w-full gap-4 hidden" id="view-memory">
+<div class="flex items-center justify-between pb-2">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-wide">
+            SAVED MEMORIES
+          </h2>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded tracking-widest font-semibold uppercase">STORED LOCALLY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deterministic context items injected into Jarvis Core prompt chains.</p>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-4">
+<div class="col-span-12 lg:col-span-4 bg-surface-container-low p-4 rounded-xl flex flex-col gap-3 transition-all border border-surface-container-highest" id="store-context-panel"><div class="flex items-center justify-between pb-1 border-b border-surface-container-highest"><h3 class="font-headline-sm text-headline-sm text-primary font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-fixed-dim text-base">bookmark_add</span>Store New Context</h3><span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container px-2 py-0.5 rounded font-mono">DETERMINISTIC</span></div><div class="grid grid-cols-2 gap-2"><div class="flex flex-col gap-1.5"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold" for="mem-category-select">Category</label><select class="w-full bg-surface-container p-2 rounded-lg text-on-surface font-body-sm focus:outline-none focus:border-primary-container/60 border border-surface-container-highest transition-colors" id="mem-category-select"><option value="Skills">Skills</option><option value="Personal">Personal</option><option value="Goals">Goals</option><option value="Directives">Directives</option></select></div><div class="flex flex-col gap-1.5"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold" for="mem-priority-select">Priority</label><select class="w-full bg-surface-container p-2 rounded-lg text-on-surface font-body-sm focus:outline-none focus:border-primary-container/60 border border-surface-container-highest transition-colors" id="mem-priority-select"><option value="Critical">Critical</option><option selected="" value="High">High</option><option value="Normal">Normal</option><option value="Low">Low</option></select></div></div><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold" for="mem-content-input">Memory Content</label><span class="font-label-sm text-label-sm text-on-surface-variant/70" id="mem-char-count">0 / 500</span></div><textarea class="w-full bg-surface-container p-2.5 rounded-lg text-on-surface font-body-sm focus:outline-none focus:border-primary-container/60 border border-surface-container-highest placeholder:text-on-surface-variant/60 transition-colors" id="mem-content-input" oninput="updateMemCharCount()" placeholder="GFFHFGGDGH" rows="4"></textarea></div><div class="p-2.5 rounded-lg bg-surface-container border border-primary-container/40 text-primary items-center gap-2 font-label-md text-label-md transition-all hidden" id="mem-feedback-toast"><span class="material-symbols-outlined text-base text-primary-fixed-dim">check_circle</span><span class="" id="mem-feedback-msg">Committed "Skills" node into memory!</span></div><div class="flex items-center gap-2 pt-1"><button class="flex-1 py-2.5 rounded-lg bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center justify-center gap-1.5 shadow-[0_0_12px_rgba(0,242,254,0.25)] transition-all active:scale-[0.99]" id="btn-commit-memory" onclick="saveMemory()" type="button"><span class="material-symbols-outlined text-base">save</span><span class="">Commit to Memory Store</span></button><button class="px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface text-label-md font-label-md font-medium transition-colors border border-surface-container-highest" onclick="clearMemoryForm()" title="Clear form" type="button"><span class="material-symbols-outlined text-base">clear</span></button></div></div>
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-3">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Memory Nodes (<span class="" id="mem-count">5</span>)</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim">Encryption: AES-256</span>
+</div>
+<div class="flex flex-col gap-2.5" id="memory-cards-container"><div class="memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">Skills</span><div class="flex items-center gap-1"><button onclick="editMemoryCard(this)" class="p-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-base">edit</span></button><button onclick="deleteMemoryCard(this)" class="p-1 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-base">delete</span></button></div></div><p class="memory-text font-body-md text-body-md text-on-surface">sgdfg</p><span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Just now • Priority: High</span></div><div class="memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">Skills</span>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" onclick="editMemoryCard(this)">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" onclick="deleteMemoryCard(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<p class="memory-text font-body-md text-body-md text-on-surface">EEWTWTWT</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Just now • Priority: Normal</span>
+</div>
+<div class="memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">Skills</span>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" onclick="editMemoryCard(this)">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" onclick="deleteMemoryCard(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<p class="memory-text font-body-md text-body-md text-on-surface">Experienced with Python, Rust, and modern multi-agent autonomous framework pipelines. Emphasizes clean code, async IO, and zero latency overhead.</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Oct 14 • Priority: High</span>
+</div>
+<div class="memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">Personal</span>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" onclick="editMemoryCard(this)">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" onclick="deleteMemoryCard(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<p class="memory-text font-body-md text-body-md text-on-surface">Prefers dark mode interfaces, compact telemetry displays, and minimal prose explanations in diagnostic readouts.</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Oct 18 • Priority: Normal</span>
+</div>
+<div class="memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">Goals</span>
+<div class="flex items-center gap-1">
+<button class="p-1 text-on-surface-variant hover:text-primary transition-colors" onclick="editMemoryCard(this)">
+<span class="material-symbols-outlined text-base">edit</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-error transition-colors" onclick="deleteMemoryCard(this)">
+<span class="material-symbols-outlined text-base">delete</span>
+</button>
+</div>
+</div>
+<p class="memory-text font-body-md text-body-md text-on-surface">Achieve sub-10ms agent response times across all distributed nodes and ship the Jarvis V2.5 Omni update before Q4.</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Oct 20 • Priority: Critical</span>
+</div>
+</div>
+</div>
+</div>
+</div><div class="dashboard-view flex-col w-full gap-5 hidden" id="view-project-tools"><div class="flex flex-col gap-1 pb-1"><div class="flex items-center gap-2"></div><h2 class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">Project tools</h2></div><div class="grid grid-cols-12 gap-5"><div class="col-span-12 lg:col-span-6 bg-surface-container-low p-5 rounded-2xl border border-surface-container-highest flex flex-col justify-between gap-5 shadow-sm"><div class="flex flex-col gap-4"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim text-lg">folder</span><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Selected project</h3></div><span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container px-2.5 py-0.5 rounded font-mono font-semibold tracking-wider uppercase">FILESYSTEM OPERATIONS</span></div><div class="flex flex-col gap-1.5"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="nl-operation-input">Describe What You Want To Do</label><textarea class="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl p-3.5 text-on-surface font-mono text-body-sm leading-relaxed focus:outline-none focus:border-primary-container/60 transition-colors" id="nl-operation-input" rows="5" style="height: 192px;">Rename this project to SmartAssistant
+Move this project into D:\CollegeProjects
+Create a docs folder</textarea></div></div><button class="w-full py-3 px-4 rounded-xl bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_16px_rgba(0,242,254,0.35)] transition-all active:scale-[0.99]" id="btn-plan-operation" onclick="openProjectToolsModal('plan')" type="button"><span class="">Plan operation</span><span class="text-base font-bold">↗</span></button></div><div class="col-span-12 lg:col-span-6 bg-surface-container-low p-5 rounded-2xl border border-surface-container-highest flex flex-col justify-between gap-5 shadow-sm"><div class="flex flex-col gap-4"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim text-lg">tune</span><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Manual operation</h3></div><span class="font-label-sm text-label-sm text-on-surface-variant/80 bg-surface-container px-2.5 py-0.5 rounded font-mono font-semibold tracking-wider uppercase text-[10px]">FOR EXACT CONTROL</span></div><div class="flex flex-col gap-1.5"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="manual-project-path">Project Folder Path</label><div class="flex items-center gap-2"><input class="hidden" id="folder-picker-input" type="file" webkitdirectory="" directory="" onchange="if(this.files &amp;&amp; this.files.length &gt; 0){ const folderName = this.files[0].webkitRelativePath.split('/')[0] || this.files[0].name; document.getElementById('manual-project-path').value = 'D:\\Projects\\' + folderName; const dest = document.getElementById('manual-dest-path'); if(dest &amp;&amp; dest.value.includes('MyNewProject')) { dest.value = 'D:\\Projects\\' + folderName + '-backup'; } const notify = document.getElementById('project-path-notification'); if(notify){ notify.innerText = 'Loaded directory: ' + folderName; notify.classList.remove('hidden'); setTimeout(()=&gt;notify.classList.add('hidden'), 2500); } }"><input class="flex-1 bg-surface-container-lowest border border-surface-container-highest rounded-xl p-3 text-on-surface font-mono text-body-sm focus:outline-none focus:border-primary-container/60 transition-colors" id="manual-project-path" type="text" value="D:\Projects\my-app"><button class="px-3 py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest border border-surface-container-highest text-on-surface font-body-sm flex items-center gap-2 transition-colors shrink-0 cursor-pointer hover:border-primary-container/40 active:scale-95" onclick="document.getElementById('folder-picker-input').click()" type="button"><span class="material-symbols-outlined text-base text-primary-fixed-dim">folder_open</span><span class="">Browse for project folder...</span></button></div><div class="flex items-center gap-1.5 pt-1 flex-wrap"><span class="text-label-sm font-label-sm text-on-surface-variant/70">Quick picks:</span><button type="button" class="text-label-sm font-mono px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary-fixed-dim border border-surface-container-highest cursor-pointer transition-colors" onclick="document.getElementById('manual-project-path').value='D:\\Projects\\my-app'; document.getElementById('manual-dest-path').value='D:\\Projects\\my-app-v2';">my-app</button><button type="button" class="text-label-sm font-mono px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary-fixed-dim border border-surface-container-highest cursor-pointer transition-colors" onclick="document.getElementById('manual-project-path').value='D:\\Projects\\SmartAssistant'; document.getElementById('manual-dest-path').value='D:\\Projects\\SmartAssistant-release';">SmartAssistant</button><button type="button" class="text-label-sm font-mono px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary-fixed-dim border border-surface-container-highest cursor-pointer transition-colors" onclick="document.getElementById('manual-project-path').value='D:\\Projects\\snabbler-core'; document.getElementById('manual-dest-path').value='D:\\Projects\\snabbler-core-build';">snabbler-core</button><button type="button" class="text-label-sm font-mono px-2 py-0.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary-fixed-dim border border-surface-container-highest cursor-pointer transition-colors" onclick="document.getElementById('manual-project-path').value='D:\\Projects\\neural-matrix'; document.getElementById('manual-dest-path').value='D:\\Projects\\neural-matrix-prod';">neural-matrix</button></div><div class="hidden text-label-sm text-emerald-400 font-mono flex items-center gap-1 mt-0.5" id="project-path-notification"><span class="material-symbols-outlined text-base">check_circle</span>Folder selected</div></div><div class="flex flex-col gap-1.5"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="manual-operation-type">Operation</label><select class="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl p-3 text-on-surface font-mono text-body-sm focus:outline-none focus:border-primary-container/60 transition-colors cursor-pointer" id="manual-operation-type" onchange="handleOperationChange()"><option selected="" value="rename">Rename project folder</option><option value="move">Move project</option><option value="create">Create folder</option><option value="copy">Copy files</option></select></div><div class="flex flex-col gap-1.5"><label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="manual-dest-path" id="destination-path-label">Destination Path (Full Target Path)</label><input class="w-full bg-surface-container-lowest border border-surface-container-highest rounded-xl p-3 text-on-surface font-mono text-body-sm focus:outline-none focus:border-primary-container/60 transition-colors" id="manual-dest-path" type="text" value="D:\Projects\MyNewProject"></div></div><button class="w-full py-3 px-4 rounded-xl bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_16px_rgba(0,242,254,0.35)] transition-all active:scale-[0.99]" id="btn-preview-operation" onclick="openProjectToolsModal('manual')" type="button"><span class="">Preview operation</span><span class="text-base font-bold">↗</span></button></div></div><div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" id="project-tools-modal"><div class="bg-surface-container-low border border-primary-container/40 rounded-2xl max-w-lg w-full p-5 shadow-[0_0_36px_rgba(0,242,254,0.25)] flex flex-col gap-4"><div class="flex items-center justify-between border-b border-surface-container-highest pb-3"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary-fixed-dim">verified_user</span><h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Operation Approval Required</h4></div><button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" onclick="closeProjectToolsModal()"><span class="material-symbols-outlined text-base">close</span></button></div><div class="flex flex-col gap-2.5 font-mono text-body-sm bg-surface-container-lowest p-3.5 rounded-xl border border-surface-container-highest"><div class="flex justify-between text-label-sm text-on-surface-variant"><span class="">STATUS</span><span class="text-primary-fixed-dim font-bold">AWAITING CONFIRMATION</span></div><div class="text-on-surface font-semibold" id="modal-operation-desc">Rename 'my-app' → 'MyNewProject'</div><div class="text-label-sm text-on-surface-variant break-all" id="modal-operation-detail">Source: D:\Projects\my-app<br>Target: D:\Projects\MyNewProject</div></div><p class="font-body-sm text-on-surface-variant">Review the proposed modification carefully. Once approved, the atomic file transaction will execute immediately.</p><div class="flex items-center gap-2 pt-1"><button class="flex-1 py-2.5 rounded-xl bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-semibold text-body-md transition-all shadow-[0_0_12px_rgba(0,242,254,0.25)]" onclick="confirmProjectOperation()" type="button">Approve &amp; Execute</button><button class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-body-md font-medium border border-surface-container-highest transition-colors" onclick="closeProjectToolsModal()" type="button">Cancel</button></div></div></div></div>
+</div></main></div>
+<script>
+  (function initDashboard() {
+    const navLinks = document.querySelectorAll('aside nav a[data-path]');
+    const views = {
+      'jarvis-core': document.getElementById('view-jarvis'),
+      'workflow-history': document.getElementById('view-history'),
+      'workflow-studio': document.getElementById('view-studio'),
+      'memory-store': document.getElementById('view-memory'),
+      'project-tools': document.getElementById('view-project-tools')
+    };
+
+    function activateTab(path) {
+      navLinks.forEach(link => {
+        const linkPath = link.getAttribute('data-path');
+        if (linkPath === path) {
+          link.classList.add('bg-surface-container-high', 'text-primary', 'font-medium', 'shadow-[0_0_16px_-4px_rgba(0,242,254,0.25)]');
+          link.classList.remove('text-on-surface-variant');
+        } else {
+          link.classList.remove('bg-surface-container-high', 'text-primary', 'font-medium', 'shadow-[0_0_16px_-4px_rgba(0,242,254,0.25)]');
+          link.classList.add('text-on-surface-variant');
+        }
+      });
+
+      Object.entries(views).forEach(([viewKey, viewEl]) => {
+        if (!viewEl) return;
+        if (viewKey === path) {
+          viewEl.classList.remove('hidden');
+          viewEl.classList.add('flex');
+        } else {
+          viewEl.classList.add('hidden');
+          viewEl.classList.remove('flex');
+        }
+      });
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const path = this.getAttribute('data-path');
+        activateTab(path);
+      });
+    });
+
+    activateTab('jarvis-core');
+  })();
+
+  function setPromptDirective(text) {
+    const input = document.getElementById('prompt-input');
+    if (input) {
+      input.value = text;
+      input.focus();
+    }
+  }
+
+  function handleDispatch() {
+    const input = document.getElementById('prompt-input');
+    if (!input || !input.value.trim()) return;
+    input.value = 'Transmitting directive to VICTUS CORE...';
+    setTimeout(() => {
+      input.value = '';
+      input.placeholder = 'Directive executed. Ready for next instruction...';
+    }, 700);
+  }
+
+  function selectHistory(type) {
+    const cards = ['calc', 'file', 'proj', 'sys'];
+    cards.forEach(c => {
+      const el = document.getElementById('hist-card-' + c);
+      if (el) {
+        if (c === type) {
+          el.classList.add('bg-surface-container-high');
+          el.classList.remove('bg-surface-container-low');
+        } else {
+          el.classList.remove('bg-surface-container-high');
+          el.classList.add('bg-surface-container-low');
+        }
+      }
+    });
+
+    const title = document.getElementById('hist-detail-title');
+    const id = document.getElementById('hist-detail-id');
+    const dur = document.getElementById('hist-detail-dur');
+    const outcome = document.getElementById('hist-detail-outcome');
+
+    if (type === 'calc') {
+      title.innerText = 'CALCULATION EXPLAINER';
+      id.innerText = '#RUN-90218';
+      dur.innerText = '242.18 ms';
+      outcome.innerText = 'Verified 100%';
+    } else if (type === 'file') {
+      title.innerText = 'FILE ORGANIZER';
+      id.innerText = '#RUN-90217';
+      dur.innerText = '1,140.02 ms';
+      outcome.innerText = 'Organized 84 files';
+    } else if (type === 'proj') {
+      title.innerText = 'PROJECT ASSISTANT';
+      id.innerText = '#RUN-90214';
+      dur.innerText = '14,802.10 ms';
+      outcome.innerText = 'Timed out (Code 504)';
+    } else if (type === 'sys') {
+      title.innerText = 'SYSTEM CHECK';
+      id.innerText = '#RUN-90209';
+      dur.innerText = '120.40 ms';
+      outcome.innerText = 'Aborted by operator';
+    }
+  }
+
+  function deleteHistoryItem(btn) {
+    const card = btn.closest('.p-4');
+    if (card) {
+      card.style.opacity = '0';
+      setTimeout(() => card.remove(), 200);
+    }
+  }
+
+  function focusMemoryInput() {
+    const inp = document.getElementById('mem-content-input');
+    if (inp) inp.focus();
+  }
+
+  function updateMemoryCount() {
+    const countEl = document.getElementById('mem-count');
+    const container = document.getElementById('memory-cards-container');
+    if (countEl && container) {
+      countEl.innerText = container.querySelectorAll('.memory-card').length;
+    }
+  }
+
+  function saveMemory() {
+    const cat = document.getElementById('mem-category-select').value;
+    const content = document.getElementById('mem-content-input');
+    if (!content || !content.value.trim()) return;
+
+    const container = document.getElementById('memory-cards-container');
+    const newCard = document.createElement('div');
+    newCard.className = 'memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container';
+    newCard.innerHTML = `
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-label-sm text-primary-fixed-dim bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">${cat}</span>
+        <div class="flex items-center gap-1">
+          <button onclick="editMemoryCard(this)" class="p-1 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-base">edit</span>
+          </button>
+          <button onclick="deleteMemoryCard(this)" class="p-1 text-on-surface-variant hover:text-error transition-colors">
+            <span class="material-symbols-outlined text-base">delete</span>
+          </button>
+        </div>
+      </div>
+      <p class="memory-text font-body-md text-body-md text-on-surface">${content.value.trim()}</p>
+      <span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Just now • Priority: Normal</span>
+    `;
+
+    container.prepend(newCard);
+    content.value = '';
+    updateMemoryCount();
+  }
+
+  function deleteMemoryCard(btn) {
+    const card = btn.closest('.memory-card');
+    if (card) {
+      card.remove();
+      updateMemoryCount();
+    }
+  }
+
+  function editMemoryCard(btn) {
+    const card = btn.closest('.memory-card');
+    const p = card.querySelector('.memory-text');
+    if (!p) return;
+    const current = p.innerText;
+    const updated = prompt('Edit Memory Content:', current);
+    if (updated !== null && updated.trim() !== '') {
+      p.innerText = updated.trim();
+    }
+  }
+
+  /* Interactive Dark/Light Theme Switching */
+  function switchTheme(mode) {
+    const html = document.documentElement;
+    const darkBtn = document.getElementById('btn-theme-dark');
+    const lightBtn = document.getElementById('btn-theme-light');
+
+    if (mode === 'light') {
+      html.classList.remove('dark');
+      html.classList.add('light-mode');
+      if (lightBtn && darkBtn) {
+        lightBtn.className = 'flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md font-label-md text-label-md transition-all font-semibold bg-white text-cyan-600 shadow-sm';
+        darkBtn.className = 'flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md font-label-md text-label-md transition-all text-slate-500 hover:text-slate-800';
+      }
+      try { localStorage.setItem('victus_theme', 'light'); } catch(e){}
+    } else {
+      html.classList.add('dark');
+      html.classList.remove('light-mode');
+      if (darkBtn && lightBtn) {
+        darkBtn.className = 'flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md font-label-md text-label-md transition-all font-semibold bg-surface-container-high text-primary shadow-[0_0_12px_rgba(0,242,254,0.25)]';
+        lightBtn.className = 'flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-md font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface';
+      }
+      try { localStorage.setItem('victus_theme', 'dark'); } catch(e){}
+    }
+  }
+
+  (function initThemePreference() {
+    try {
+      const saved = localStorage.getItem('victus_theme');
+      if (saved === 'light') {
+        switchTheme('light');
+      }
+    } catch(e){}
+  })();
+
+  function renderAttachmentChip(name, size, type) { 
+    const list = document.getElementById('active-attachments-list'); 
+    if (!list) return; 
+    const id = 'att-' + Date.now() + '-' + Math.floor(Math.random()*1000); 
+    const icon = type === 'image' ? 'image' : (type === 'doc' ? 'description' : 'attach_file'); 
+    const chip = document.createElement('div'); 
+    chip.id = id; 
+    chip.className = 'flex items-center gap-2 pl-2 pr-1.5 py-1 rounded-lg bg-surface-container border border-primary-container/40 text-primary shadow-[0_0_8px_rgba(0,242,254,0.15)] text-label-md font-label-md transition-all'; 
+    chip.innerHTML = '<span class="material-symbols-outlined text-[16px] text-primary-fixed-dim">' + icon + '</span><span class="font-medium truncate max-w-[140px]">' + name + '</span><span class="text-on-surface-variant text-label-sm text-[10px]">(' + size + ')</span><button type="button" onclick="removeAttachmentChip(\'' + id + '\')" class="hover:bg-surface-container-high rounded p-0.5 text-on-surface-variant hover:text-error transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-sm">close</span></button>'; 
+    list.appendChild(chip); 
+    updateAttachmentStatus(); 
+  } 
+  function removeAttachmentChip(id) { 
+    const el = document.getElementById(id); 
+    if (el) { el.remove(); updateAttachmentStatus(); } 
+  } 
+  function updateAttachmentStatus() { 
+    const list = document.getElementById('active-attachments-list'); 
+    const status = document.getElementById('attachment-status-text'); 
+    if (!list || !status) return; 
+    const count = list.children.length; 
+    if (count === 0) { status.innerText = 'Ready for files'; } 
+    else { status.innerText = count + (count === 1 ? ' file attached' : ' files attached'); } 
+  } 
+  function handleFileSelected(event, type) { 
+    const files = event.target.files; 
+    if (files && files.length > 0) { 
+      for (let i = 0; i < files.length; i++) { 
+        const file = files[i]; 
+        const sz = file.size > 1048576 ? (file.size / 1048576).toFixed(1) + ' MB' : (file.size / 1024).toFixed(0) + ' KB'; 
+        renderAttachmentChip(file.name, sz, type || (file.type.startsWith('image/') ? 'image' : 'file')); 
+      } 
+      event.target.value = ''; 
+    } else { 
+      const sampleName = type === 'image' ? 'neural_schematic.png' : (type === 'doc' ? 'project_spec.pdf' : 'directive_manifest.yaml'); 
+      const sampleSize = type === 'image' ? '2.4 MB' : (type === 'doc' ? '418 KB' : '24 KB'); 
+      renderAttachmentChip(sampleName, sampleSize, type || 'file'); 
+    } 
+  }
+</script>
+<!-- ENHANCED INTERACTIVE CONTROLLER FOR WORKFLOW STUDIO -->
+<script id="studio-interactive-controller">
+(function() {
+  window.workflowData = {
+    'System Check': {
+      version: 'v2.5.0',
+      desc: 'Collect available system information, verify daemon latency, monitor cluster heatmaps, and synthesize telemetry diagnostics.',
+      inputLabel: 'Target Subsystem / Filter',
+      inputMeta: 'Optional · string',
+      inputPlaceholder: 'e.g. ALL_DAEMONS, CPU_MEM, NETWORK',
+      defaultValue: 'SYS_ALL_HARDWARE',
+      steps: [
+        { name: 'collect_system_info', sub: 'module: hardware_telemetry', estMs: 142 },
+        { name: 'summarize_system_info', sub: 'agent: llm_diagnostician', estMs: 280 }
+      ],
+      generateResult: function(inputVal) {
+        const filter = inputVal || 'SYS_ALL_HARDWARE';
+        return JSON.stringify({
+          subsystem_target: filter,
+          status: "HEALTHY_OPTIMAL",
+          cluster_nodes: ["alpha-01", "alpha-02", "gpu-worker-4"],
+          telemetry: {
+            cpu_load: "16.8%",
+            memory_pool: "5.8 / 32.0 GB (18% util)",
+            daemon_latency_p99: "4.2ms",
+            daemons_online: "7/7 active (spark, bus, pert, ast, scribe, db, mem)"
+          },
+          security_layer: {
+            aes_handshake: "VERIFIED",
+            tls_cipher: "ChaCha20-Poly1305"
+          },
+          summary_verdict: "All daemon channels nominal. No thread blockage or memory leaks observed across " + filter + "."
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Target [" + (inputVal || 'SYS_ALL_HARDWARE') + "] scanned successfully. 7/7 daemons healthy, latency p99 at 4.2ms.";
+      }
+    },
+    'Calculation Explainer': {
+      version: 'v1.8.2',
+      desc: 'Formal proof derivation, symbolic math evaluator, step-by-step calculus solver, and multi-step theorem verification engine.',
+      inputLabel: 'Mathematical Expression / Theorem',
+      inputMeta: 'Required · string / latex',
+      inputPlaceholder: 'e.g. integral(3*x^2 + 2*x, x, 0, 4)',
+      defaultValue: 'integral(3*x^2 + 2*x, x, 0, 4)',
+      steps: [
+        { name: 'parse_ast_tokens', sub: 'module: sympy_matrix_engine', estMs: 110 },
+        { name: 'derive_step_proof', sub: 'agent: formal_solver', estMs: 215 }
+      ],
+      generateResult: function(inputVal) {
+        const expr = inputVal || 'integral(3*x^2 + 2*x, x, 0, 4)';
+        return JSON.stringify({
+          input_expression: expr,
+          ast_nodes_parsed: 18,
+          antiderivative: "F(x) = x^3 + x^2 + C",
+          evaluation_interval: "[0, 4]",
+          step_derivation: [
+            "1. Apply linearity: ∫(3*x^2 + 2*x)dx = 3*∫x^2 dx + 2*∫x dx",
+            "2. Power rule integration: 3*(x^3 / 3) + 2*(x^2 / 2) = x^3 + x^2",
+            "3. Evaluate upper bound at x=4: (4)^3 + (4)^2 = 64 + 16 = 80",
+            "4. Evaluate lower bound at x=0: (0)^3 + (0)^2 = 0",
+            "5. Final delta: 80 - 0 = 80"
+          ],
+          exact_result: 80,
+          confidence_score: 0.99998
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Calculus theorem solved. Definite integral evaluated to 80 with 0.99998 verified confidence.";
+      }
+    },
+    'Daily Briefing': {
+      version: 'v3.0.1',
+      desc: 'Aggregate RSS feeds, active Git pull requests, pending calendar items, and prioritized daily executive digest.',
+      inputLabel: 'Briefing Context Filter',
+      inputMeta: 'Optional · string',
+      inputPlaceholder: 'e.g. #engineering, #management, #all',
+      defaultValue: '#engineering-digest',
+      steps: [
+        { name: 'fetch_feeds_and_prs', sub: 'module: stream_collector', estMs: 165 },
+        { name: 'synthesize_briefing', sub: 'agent: executive_brief_llm', estMs: 310 }
+      ],
+      generateResult: function(inputVal) {
+        const topic = inputVal || '#engineering-digest';
+        return JSON.stringify({
+          topic_scope: topic,
+          sources_polled: ["github/org/victus", "linear/sprints", "internal_rss_feed"],
+          prs_reviewed: 14,
+          prs_merged: 5,
+          unread_discussions: 4,
+          high_priority_items: [
+            "PR #492: Zero-latency IPC socket daemon optimization",
+            "Ticket #108: Validate AES-256 local encrypted memory persistence"
+          ],
+          status: "DIGEST_COMPILED",
+          synthesized_at: new Date().toISOString()
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Briefing compiled for " + (inputVal || '#engineering') + ". 14 pull requests reviewed, 0 critical blockers found.";
+      }
+    },
+    'File Organizer': {
+      version: 'v1.2.0',
+      desc: 'Classify incoming assets, index SHA-256 metadata, prune stale temporary files, and optimize local storage tiers.',
+      inputLabel: 'Target Directory / Blob Bucket',
+      inputMeta: 'Required · path',
+      inputPlaceholder: 'e.g. /workspace/incoming/raw_dumps',
+      defaultValue: '/workspace/incoming',
+      steps: [
+        { name: 'scan_and_hash_directory', sub: 'module: sha256_indexer', estMs: 195 },
+        { name: 'categorize_and_relocate', sub: 'agent: filesystem_agent', estMs: 260 }
+      ],
+      generateResult: function(inputVal) {
+        const path = inputVal || '/workspace/incoming';
+        return JSON.stringify({
+          target_path: path,
+          scanned_objects: 148,
+          relocated_files: 84,
+          pruned_stale_cache: "420.8 MB",
+          bucket_breakdown: {
+            documents: 42,
+            neural_weights: 12,
+            telemetry_logs: 30
+          },
+          status: "PIPELINE_PRUNED_CLEAN",
+          iops_overhead: "0.8%"
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Directory " + (inputVal || '/workspace/incoming') + " pruned cleanly. 84 files relocated, 420.8 MB deduplicated.";
+      }
+    },
+    'Goal Planning': {
+      version: 'v2.1.0',
+      desc: 'Deconstruct high-level OKRs into tactical sprints with dependencies, pert charts, and critical path calculations.',
+      inputLabel: 'Target Milestone / Goal Spec',
+      inputMeta: 'Required · text',
+      inputPlaceholder: 'e.g. Launch V2.5 Omni prior to Q4',
+      defaultValue: 'Sub-10ms agent cluster benchmark',
+      steps: [
+        { name: 'deconstruct_milestones', sub: 'module: pert_chart_builder', estMs: 140 },
+        { name: 'generate_work_breakdown', sub: 'agent: strategic_planner', estMs: 290 }
+      ],
+      generateResult: function(inputVal) {
+        const goal = inputVal || 'Sub-10ms agent cluster benchmark';
+        return JSON.stringify({
+          strategic_goal: goal,
+          sprint_duration_est_days: 18,
+          critical_path_milestones: [
+            "M1: Benchmark distributed redis telemetry broker (Day 1-4)",
+            "M2: Async worker loop non-blocking rewrite (Day 5-11)",
+            "M3: Load stress test against 10k concurrent prompts (Day 12-18)"
+          ],
+          confidence_index: 0.94,
+          status: "SPRINT_GRAPH_GENERATED"
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Goal decomposition complete for [" + (inputVal || 'Objective') + "]. 3 sequential phases mapped with 94% confidence.";
+      }
+    },
+    'Project Assistant': {
+      version: 'v2.4.0',
+      desc: 'Synthesize Kanban updates, track blocker resolution tickets, triage backlog, and generate release documentation.',
+      inputLabel: 'Project Board ID',
+      inputMeta: 'Required · string',
+      inputPlaceholder: 'e.g. PROJ-SYNAPSE-ALPHA',
+      defaultValue: 'PROJ-SYNAPSE-ALPHA',
+      steps: [
+        { name: 'sync_kanban_columns', sub: 'module: jira_github_connector', estMs: 130 },
+        { name: 'draft_release_notes', sub: 'agent: scribe_agent', estMs: 275 }
+      ],
+      generateResult: function(inputVal) {
+        const board = inputVal || 'PROJ-SYNAPSE-ALPHA';
+        return JSON.stringify({
+          project_board: board,
+          open_epics: 3,
+          closed_tasks_today: 29,
+          blockers_detected: 0,
+          candidate_version: "v2.4.0-rc2-verified",
+          changelog_summary: "Automated agent handshakes enabled, multi-tab hot-swapping perfected.",
+          status: "RELEASE_NOTES_COMPILED"
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Board [" + (inputVal || 'PROJ-SYNAPSE-ALPHA') + "] synced: 29 tickets closed today, release notes drafted.";
+      }
+    },
+    'Research & Study': {
+      version: 'v1.9.4',
+      desc: 'Query Semantic Scholar and ArXiv repositories, synthesize citations, and output structured literature reviews.',
+      inputLabel: 'Research Query / Keywords',
+      inputMeta: 'Required · string',
+      inputPlaceholder: 'e.g. Multi-agent cognitive architectures 2024',
+      defaultValue: 'Multi-agent latent reasoning latency',
+      steps: [
+        { name: 'query_arxiv_citations', sub: 'module: arxiv_scholar_api', estMs: 185 },
+        { name: 'synthesize_abstracts', sub: 'agent: research_synthesizer', estMs: 320 }
+      ],
+      generateResult: function(inputVal) {
+        const query = inputVal || 'Multi-agent latent reasoning latency';
+        return JSON.stringify({
+          query_terms: query,
+          papers_queried: 38,
+          selected_citations: 5,
+          literature_consensus: "Strong empirical trend toward sparse distributed graphs over monolithic prompt routing.",
+          top_references: [
+            "ArXiv:2403.09112 - Latency Bounds in Distributed LLM DAGs",
+            "IEEE CS 2024 - Parallelized Context Sharing in Autonomous Swarms"
+          ],
+          status: "SYNTHESIS_COMPLETE"
+        }, null, 2);
+      },
+      summary: function(inputVal) {
+        return "Literature review synthesized for [" + (inputVal || 'Query') + "]. 38 papers parsed, top 5 citations extracted.";
+      }
+    }
+  };
+
+  window.currentWorkflow = 'System Check';
+  window.isWorkflowRunning = false;
+  let timerInterval = null;
+
+  window.selectStudioWorkflow = function(name) {
+    if (window.isWorkflowRunning) return;
+    const data = window.workflowData[name];
+    if (!data) return;
+    window.currentWorkflow = name;
+
+    // Highlight left menu list item
+    const leftCards = document.querySelectorAll('#studio-workflow-list > div');
+    leftCards.forEach(card => {
+      const cardTitle = card.querySelector('h4');
+      if (cardTitle && cardTitle.innerText.trim() === name) {
+        card.classList.add('bg-surface-container-high', 'shadow-sm', 'border-primary-container/30');
+        card.classList.remove('bg-surface-container-low', 'border-transparent');
+        const icon = card.querySelector('.material-symbols-outlined');
+        if (icon) { icon.classList.add('text-primary-fixed-dim'); icon.classList.remove('text-on-surface-variant'); }
+        cardTitle.classList.add('text-primary');
+        cardTitle.classList.remove('text-on-surface');
+      } else {
+        card.classList.remove('bg-surface-container-high', 'shadow-sm', 'border-primary-container/30');
+        card.classList.add('bg-surface-container-low', 'border-transparent');
+        const icon = card.querySelector('.material-symbols-outlined');
+        if (icon) { icon.classList.remove('text-primary-fixed-dim'); icon.classList.add('text-on-surface-variant'); }
+        if (cardTitle) { cardTitle.classList.remove('text-primary'); cardTitle.classList.add('text-on-surface'); }
+      }
+    });
+
+    // Update configure panel titles and meta
+    const titleEl = document.getElementById('studio-title');
+    const versionEl = document.getElementById('studio-version-tag');
+    const descEl = document.getElementById('studio-description');
+    const inputLabelEl = document.getElementById('studio-input-label');
+    const inputMetaEl = document.getElementById('studio-input-meta');
+    const inputField = document.getElementById('studio-input-field');
+    const totalStepsEl = document.getElementById('pipeline-total-steps');
+
+    if (titleEl) titleEl.innerText = name;
+    if (versionEl) versionEl.innerText = data.version;
+    if (descEl) descEl.innerText = data.desc;
+    if (inputLabelEl) {
+      inputLabelEl.innerHTML = '<span class="material-symbols-outlined text-primary-fixed-dim text-base">tune</span>' + data.inputLabel;
+    }
+    if (inputMetaEl) inputMetaEl.innerText = data.inputMeta;
+    if (inputField) {
+      inputField.placeholder = data.inputPlaceholder;
+      inputField.value = data.defaultValue || '';
+    }
+    if (totalStepsEl) {
+      totalStepsEl.innerText = data.steps.length + ' STEPS';
+    }
+
+    // Reset status outputs
+    clearStudioOutput();
+
+    // Render step pipeline
+    renderStudioSteps(data.steps);
+  };
+
+  function renderStudioSteps(steps) {
+    const list = document.getElementById('studio-steps-list');
+    if (!list) return;
+    list.innerHTML = '';
+    steps.forEach((st, idx) => {
+      const stepNum = idx + 1;
+      const row = document.createElement('div');
+      row.id = 'studio-step-' + stepNum;
+      row.className = 'flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-surface-container-highest/40 bg-surface-container-lowest/50';
+      row.innerHTML = `
+        <span id="studio-step-${stepNum}-badge" class="w-8 h-8 rounded-full bg-surface-container-highest/60 border border-surface-container-highest flex items-center justify-center text-label-sm text-on-surface-variant font-mono font-medium shrink-0 transition-all">${stepNum}</span>
+        <div class="flex flex-col flex-1">
+          <span class="text-body-md font-semibold text-on-surface" id="studio-step-${stepNum}-name">${st.name}</span>
+          <span class="text-label-sm text-on-surface-variant/70 font-mono" id="studio-step-${stepNum}-sub">${st.sub}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span id="studio-step-${stepNum}-dur" class="text-label-sm font-mono text-primary-fixed-dim hidden"></span>
+          <span id="studio-step-${stepNum}-state" class="text-label-sm text-on-surface-variant/50 material-symbols-outlined text-base">radio_button_unchecked</span>
+        </div>
+      `;
+      list.appendChild(row);
+    });
+  }
+
+  window.resetInputField = function() {
+    const data = window.workflowData[window.currentWorkflow];
+    const inputField = document.getElementById('studio-input-field');
+    if (data && inputField) {
+      inputField.value = data.defaultValue || '';
+      inputField.focus();
+    }
+  };
+
+  window.resetStudioWorkflow = function() {
+    window.selectStudioWorkflow(window.currentWorkflow);
+  };
+
+  window.clearStudioOutput = function() {
+    if (window.isWorkflowRunning) return;
+    const statusEl = document.getElementById('studio-status');
+    const badgeEl = document.getElementById('studio-status-badge');
+    const resultWrap = document.getElementById('studio-telemetry-result-wrapper');
+    const clearBtn = document.getElementById('studio-clear-btn');
+    const ctaBtn = document.getElementById('studio-cta-btn');
+    const ctaText = document.getElementById('studio-cta-text');
+    const ctaIcon = document.getElementById('studio-cta-icon');
+    const ctaArrow = document.getElementById('studio-cta-arrow');
+
+    if (statusEl) statusEl.classList.add('hidden');
+    if (badgeEl) badgeEl.classList.add('hidden');
+    if (resultWrap) resultWrap.classList.add('hidden');
+    if (clearBtn) { clearBtn.classList.add('hidden'); clearBtn.classList.remove('flex'); }
+
+    if (ctaBtn) {
+      ctaBtn.className = 'flex-1 py-3 px-4 rounded-xl bg-on-surface hover:opacity-90 active:scale-[0.99] text-surface font-semibold text-body-md flex items-center justify-center gap-2 transition-all shadow-[0_0_16px_rgba(255,255,255,0.1)]';
+    }
+    if (ctaText) ctaText.innerText = 'Start workflow';
+    if (ctaIcon) ctaIcon.innerText = 'play_arrow';
+    if (ctaArrow) ctaArrow.classList.remove('hidden');
+
+    // Reset steps state visuals
+    const data = window.workflowData[window.currentWorkflow];
+    if (data) {
+      renderStudioSteps(data.steps);
+    }
+  };
+
+  function addLiveLog(text, isAccent) {
+    const logBox = document.getElementById('studio-live-logs');
+    if (!logBox) return;
+    const d = new Date();
+    const timeStr = d.toTimeString().split(' ')[0] + '.' + String(d.getMilliseconds()).padStart(3, '0');
+    const p = document.createElement('div');
+    p.className = 'flex items-center justify-between text-body-sm' + (isAccent ? ' text-primary font-semibold' : ' text-on-surface-variant');
+    p.innerHTML = `<span>[${timeStr}] ${text}</span>`;
+    logBox.appendChild(p);
+    logBox.scrollTop = logBox.scrollHeight;
+  }
+
+  window.triggerStudioRun = function() {
+    if (window.isWorkflowRunning) return;
+    window.isWorkflowRunning = true;
+
+    const data = window.workflowData[window.currentWorkflow] || window.workflowData['System Check'];
+    const inputVal = (document.getElementById('studio-input-field') || {}).value || '';
+
+    const statusEl = document.getElementById('studio-status');
+    const headlineEl = document.getElementById('studio-status-headline');
+    const descEl = document.getElementById('studio-status-desc');
+    const timerEl = document.getElementById('studio-status-timer');
+    const iconEl = document.getElementById('studio-status-icon');
+    const resultWrap = document.getElementById('studio-telemetry-result-wrapper');
+    const resultPre = document.getElementById('studio-telemetry-result');
+    const summaryText = document.getElementById('studio-summary-text');
+    const ctaBtn = document.getElementById('studio-cta-btn');
+    const ctaText = document.getElementById('studio-cta-text');
+    const ctaIcon = document.getElementById('studio-cta-icon');
+    const ctaArrow = document.getElementById('studio-cta-arrow');
+    const clearBtn = document.getElementById('studio-clear-btn');
+    const badgeEl = document.getElementById('studio-status-badge');
+    const badgeText = document.getElementById('studio-status-badge-text');
+    const badgeDot = document.getElementById('studio-status-badge-dot');
+    const logBox = document.getElementById('studio-live-logs');
+
+    if (statusEl) statusEl.classList.remove('hidden');
+    if (resultWrap) resultWrap.classList.add('hidden');
+    if (clearBtn) { clearBtn.classList.remove('flex'); clearBtn.classList.add('hidden'); }
+    if (badgeEl) badgeEl.classList.remove('hidden');
+    if (badgeText) badgeText.innerText = 'Running';
+    if (badgeDot) {
+      badgeDot.className = 'w-1.5 h-1.5 rounded-full bg-primary-fixed-dim animate-ping';
+    }
+
+    if (ctaBtn) {
+      ctaBtn.className = 'flex-1 py-3 px-4 rounded-xl bg-surface-container-high text-primary font-semibold text-body-md flex items-center justify-center gap-2 transition-all cursor-not-allowed border border-primary-container/30';
+    }
+    if (ctaText) ctaText.innerText = 'Executing pipeline...';
+    if (ctaIcon) ctaIcon.innerText = 'sync';
+    if (ctaIcon) ctaIcon.classList.add('animate-spin');
+    if (ctaArrow) ctaArrow.classList.add('hidden');
+
+    if (logBox) logBox.innerHTML = '';
+    addLiveLog('WORKFLOW_INITIALIZED: ' + window.currentWorkflow, true);
+    addLiveLog('INPUT_PARAM: ' + (inputVal || 'DEFAULT'), false);
+
+    const startTime = performance.now();
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      const elapsed = ((performance.now() - startTime) / 1000).toFixed(2);
+      if (timerEl) timerEl.innerText = elapsed + 's';
+    }, 40);
+
+    // Initial step reset
+    renderStudioSteps(data.steps);
+
+    // --- STEP 1 ACTIVE ---
+    const step1 = data.steps[0];
+    const step1El = document.getElementById('studio-step-1');
+    const step1Badge = document.getElementById('studio-step-1-badge');
+    const step1State = document.getElementById('studio-step-1-state');
+    const step1Dur = document.getElementById('studio-step-1-dur');
+
+    if (step1El) step1El.className = 'flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-primary-container/60 bg-surface-container shadow-[0_0_16px_rgba(0,242,254,0.18)]';
+    if (step1Badge) step1Badge.className = 'w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-label-sm font-mono font-bold shrink-0 animate-pulse';
+    if (step1State) {
+      step1State.innerText = 'sync';
+      step1State.className = 'text-label-sm text-primary-fixed-dim material-symbols-outlined text-base animate-spin';
+    }
+    if (headlineEl) headlineEl.innerText = 'Executing Step 1: ' + step1.name;
+    if (descEl) descEl.innerText = 'Invoking worker microservice [' + step1.sub + '] on cluster node #4...';
+    addLiveLog('STEP_1_START: ' + step1.name + ' (' + step1.sub + ')', false);
+
+    // --- STEP 1 COMPLETION AFTER 800ms ---
+    setTimeout(() => {
+      const s1Time = step1.estMs || 142;
+      if (step1El) step1El.className = 'flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-emerald-500/40 bg-surface-container-lowest/60';
+      if (step1Badge) step1Badge.className = 'w-8 h-8 rounded-full bg-emerald-950/80 text-emerald-400 border border-emerald-500/50 flex items-center justify-center text-label-sm font-mono font-semibold shrink-0';
+      if (step1State) {
+        step1State.innerText = 'check_circle';
+        step1State.className = 'text-label-sm text-emerald-400 material-symbols-outlined text-base';
+      }
+      if (step1Dur) {
+        step1Dur.innerText = s1Time + 'ms';
+        step1Dur.className = 'text-label-sm font-mono text-emerald-400';
+        step1Dur.classList.remove('hidden');
+      }
+      addLiveLog('STEP_1_COMPLETED: duration=' + s1Time + 'ms, status=PASS', true);
+
+      // --- STEP 2 ACTIVE ---
+      const step2 = data.steps[1] || { name: 'finalize_execution', sub: 'agent: core_synthesis', estMs: 250 };
+      const step2El = document.getElementById('studio-step-2');
+      const step2Badge = document.getElementById('studio-step-2-badge');
+      const step2State = document.getElementById('studio-step-2-state');
+      const step2Dur = document.getElementById('studio-step-2-dur');
+
+      if (step2El) step2El.className = 'flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-primary-container/60 bg-surface-container shadow-[0_0_16px_rgba(0,242,254,0.18)]';
+      if (step2Badge) step2Badge.className = 'w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-label-sm font-mono font-bold shrink-0 animate-pulse';
+      if (step2State) {
+        step2State.innerText = 'sync';
+        step2State.className = 'text-label-sm text-primary-fixed-dim material-symbols-outlined text-base animate-spin';
+      }
+      if (headlineEl) headlineEl.innerText = 'Executing Step 2: ' + step2.name;
+      if (descEl) descEl.innerText = 'Aggregating context tokens and synthesizing structured output graph...';
+      addLiveLog('STEP_2_START: ' + step2.name + ' (' + step2.sub + ')', false);
+
+      // --- STEP 2 & OVERALL WORKFLOW COMPLETE AFTER ANOTHER 950ms ---
+      setTimeout(() => {
+        clearInterval(timerInterval);
+        const finalDuration = ((performance.now() - startTime) / 1000).toFixed(2);
+        if (timerEl) timerEl.innerText = finalDuration + 's';
+
+        const s2Time = step2.estMs || 280;
+        if (step2El) step2El.className = 'flex items-center gap-4 w-full p-2.5 rounded-xl transition-all border border-emerald-500/40 bg-surface-container-lowest/60';
+        if (step2Badge) step2Badge.className = 'w-8 h-8 rounded-full bg-emerald-950/80 text-emerald-400 border border-emerald-500/50 flex items-center justify-center text-label-sm font-mono font-semibold shrink-0';
+        if (step2State) {
+          step2State.innerText = 'check_circle';
+          step2State.className = 'text-label-sm text-emerald-400 material-symbols-outlined text-base';
+        }
+        if (step2Dur) {
+          step2Dur.innerText = s2Time + 'ms';
+          step2Dur.className = 'text-label-sm font-mono text-emerald-400';
+          step2Dur.classList.remove('hidden');
+        }
+        addLiveLog('STEP_2_COMPLETED: duration=' + s2Time + 'ms, status=PASS', true);
+        addLiveLog('DISPATCH_PAYLOAD_SUCCESS: total_latency=' + finalDuration + 's', true);
+
+        // Update HUD
+        if (iconEl) {
+          iconEl.innerText = 'verified';
+          iconEl.className = 'material-symbols-outlined text-emerald-400 text-base';
+        }
+        if (headlineEl) headlineEl.innerText = 'Execution Complete (200 OK)';
+        if (descEl) descEl.innerText = 'Workflow pipeline successfully terminated in ' + finalDuration + 's. Telemetry synced.';
+        if (badgeText) badgeText.innerText = 'Completed';
+        if (badgeDot) {
+          badgeDot.className = 'w-1.5 h-1.5 rounded-full bg-emerald-400';
+        }
+
+        // Render result payload and summary
+        const finalPayload = data.generateResult(inputVal);
+        if (resultPre) resultPre.innerText = finalPayload;
+        if (summaryText) summaryText.innerText = data.summary(inputVal);
+        if (resultWrap) resultWrap.classList.remove('hidden');
+
+        // Change CTA to "Rerun workflow"
+        if (ctaBtn) {
+          ctaBtn.className = 'flex-1 py-3 px-4 rounded-xl bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-semibold text-body-md flex items-center justify-center gap-2 transition-all shadow-[0_0_16px_rgba(0,242,254,0.3)] active:scale-[0.99]';
+        }
+        if (ctaText) ctaText.innerText = 'Rerun workflow';
+        if (ctaIcon) {
+          ctaIcon.innerText = 'replay';
+          ctaIcon.classList.remove('animate-spin');
+        }
+        if (clearBtn) {
+          clearBtn.classList.remove('hidden');
+          clearBtn.classList.add('flex');
+        }
+
+        window.isWorkflowRunning = false;
+      }, 950);
+    }, 800);
+  };
+
+  window.copyStudioResult = function() {
+    const pre = document.getElementById('studio-telemetry-result');
+    if (!pre) return;
+    navigator.clipboard.writeText(pre.innerText).then(() => {
+      const tag = document.getElementById('studio-result-status-tag');
+      if (tag) {
+        const orig = tag.innerText;
+        tag.innerText = 'COPIED TO CLIPBOARD!';
+        tag.classList.add('text-emerald-400');
+        setTimeout(() => {
+          tag.innerText = orig;
+          tag.classList.remove('text-emerald-400');
+        }, 1500);
+      }
+    });
+  };
+
+  // Initialize System Check as default workflow
+  window.selectStudioWorkflow('System Check');
+})();
+</script><script class="" id="memory-store-controller">(function(){window.focusMemoryInput=function(){var panel=document.getElementById('store-context-panel');var input=document.getElementById('mem-content-input');if(panel){panel.classList.remove('border-surface-container-highest');panel.classList.add('border-primary-container','shadow-[0_0_16px_rgba(0,242,254,0.3)]');setTimeout(function(){panel.classList.remove('border-primary-container','shadow-[0_0_16px_rgba(0,242,254,0.3)]');panel.classList.add('border-surface-container-highest');},1200);panel.scrollIntoView({behavior:'smooth',block:'center'});}if(input){input.focus();}};window.updateMemCharCount=function(){var inp=document.getElementById('mem-content-input');var countEl=document.getElementById('mem-char-count');if(inp&&countEl){countEl.innerText=inp.value.length+' / 500';}};window.clearMemoryForm=function(){var inp=document.getElementById('mem-content-input');if(inp){inp.value='';}window.updateMemCharCount();};window.showMemoryToast=function(msg){var toast=document.getElementById('mem-feedback-toast');var msgEl=document.getElementById('mem-feedback-msg');if(toast&&msgEl){msgEl.innerText=msg;toast.classList.remove('hidden');toast.classList.add('flex');setTimeout(function(){toast.classList.add('hidden');toast.classList.remove('flex');},2500);}};window.saveMemory=function(){var catEl=document.getElementById('mem-category-select');var prioEl=document.getElementById('mem-priority-select');var contentEl=document.getElementById('mem-content-input');var cat=catEl?catEl.value:'Directives';var prio=prioEl?prioEl.value:'Normal';var content=contentEl?contentEl.value.trim():'';if(!content){if(contentEl){contentEl.focus();contentEl.classList.add('border-error');setTimeout(function(){contentEl.classList.remove('border-error');},1200);}return;}var container=document.getElementById('memory-cards-container');if(!container)return;var badgeColor='text-primary-fixed-dim';if(cat==='Skills')badgeColor='text-primary-fixed-dim';else if(cat==='Personal')badgeColor='text-secondary-fixed-dim';else if(cat==='Goals')badgeColor='text-primary';else if(cat==='Directives')badgeColor='text-primary-fixed';var newCard=document.createElement('div');newCard.className='memory-card bg-surface-container-low p-4 rounded-xl flex flex-col gap-2 shadow-sm transition-all hover:bg-surface-container border border-primary-container/40';newCard.innerHTML='<div class="flex items-center justify-between"><span class="font-label-sm text-label-sm '+badgeColor+' bg-surface-container-high px-2 py-0.5 rounded font-semibold uppercase">'+cat+'</span><div class="flex items-center gap-1"><button onclick="editMemoryCard(this)" class="p-1 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined text-base">edit</span></button><button onclick="deleteMemoryCard(this)" class="p-1 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined text-base">delete</span></button></div></div><p class="memory-text font-body-md text-body-md text-on-surface">'+content.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</p><span class="font-label-sm text-label-sm text-on-surface-variant/70">Added: Just now • Priority: '+prio+'</span>';container.prepend(newCard);setTimeout(function(){newCard.classList.remove('border','border-primary-container/40');},1800);contentEl.value='';window.updateMemCharCount();window.updateMemoryCount();window.showMemoryToast('Committed "'+cat+'" node into memory!');};})();</script><script id="project-tools-controller">(function(){const navLinks=document.querySelectorAll('aside nav a[data-path]');const views={'jarvis-core':document.getElementById('view-jarvis'),'workflow-history':document.getElementById('view-history'),'workflow-studio':document.getElementById('view-studio'),'memory-store':document.getElementById('view-memory'),'project-tools':document.getElementById('view-project-tools')};function activateTab(path){navLinks.forEach(link=>{const linkPath=link.getAttribute('data-path');if(linkPath===path){link.classList.add('bg-surface-container-high','text-primary','font-medium','shadow-[0_0_16px_-4px_rgba(0,242,254,0.25)]');link.classList.remove('text-on-surface-variant');}else{link.classList.remove('bg-surface-container-high','text-primary','font-medium','shadow-[0_0_16px_-4px_rgba(0,242,254,0.25)]');link.classList.add('text-on-surface-variant');}});Object.entries(views).forEach(([viewKey,viewEl])=>{if(!viewEl)return;if(viewKey===path){viewEl.classList.remove('hidden');viewEl.classList.add('flex');}else{viewEl.classList.add('hidden');viewEl.classList.remove('flex');}});};navLinks.forEach(link=>{link.addEventListener('click',function(e){e.preventDefault();const path=this.getAttribute('data-path');activateTab(path);});});window.browseProjectFolder=function(){const pathInput=document.getElementById('manual-project-path');const p=prompt('Select Project Folder Path:',pathInput?pathInput.value:'D:\Projects\my-app');if(p!==null&&p.trim()&&pathInput){pathInput.value=p.trim();}};window.handleOperationChange=function(){const opSelect=document.getElementById('manual-operation-type');const destLabel=document.getElementById('destination-path-label');const destInput=document.getElementById('manual-dest-path');if(!opSelect||!destLabel||!destInput)return;if(opSelect.value==='create'){destLabel.innerText='Folder Name to Create';destInput.value='docs';}else if(opSelect.value==='move'){destLabel.innerText='Destination Directory';destInput.value='D:\CollegeProjects';}else if(opSelect.value==='copy'){destLabel.innerText='Destination Directory';destInput.value='D:\Projects\my-app-backup';}else{destLabel.innerText='Destination Path (Full Target Path)';destInput.value='D:\Projects\MyNewProject';}};window.openProjectToolsModal=function(mode){const modal=document.getElementById('project-tools-modal');const desc=document.getElementById('modal-operation-desc');const detail=document.getElementById('modal-operation-detail');if(!modal)return;if(mode==='plan'){const text=document.getElementById('nl-operation-input').value.trim();desc.innerText='Plan: Multi-step filesystem pipeline';detail.innerHTML=text.replace(/\n/g,'<br>');}else{const op=document.getElementById('manual-operation-type').value;const src=document.getElementById('manual-project-path').value;const dst=document.getElementById('manual-dest-path').value;desc.innerText='Operation: '+op.toUpperCase();detail.innerHTML='Source: '+src+'<br>Target: '+dst;}modal.classList.remove('hidden');modal.classList.add('flex');};window.closeProjectToolsModal=function(){const modal=document.getElementById('project-tools-modal');if(modal){modal.classList.add('hidden');modal.classList.remove('flex');}};window.confirmProjectOperation=function(){const desc=document.getElementById('modal-operation-desc');if(desc){desc.innerText='Execution successful!';desc.classList.add('text-primary-fixed-dim');}setTimeout(()=>{closeProjectToolsModal();if(desc)desc.classList.remove('text-primary-fixed-dim');},800);};})();</script>
+
+
+
+
+<script type="module" src="/src/dashboard-api.js"></script>
+</body></html>

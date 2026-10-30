@@ -1,0 +1,60 @@
+{
+  "id": "goal-planning",
+  "name": "Goal Planning",
+  "description": "Generate a deadline-aware task plan, review it, then save the approved plan to persistent goals.",
+  "version": "1.0.0",
+  "status": "ready",
+  "successCriteria": [
+    "Goal details validated",
+    "Actionable plan generated",
+    "Tasks fit the supplied deadline when one is provided"
+  ],
+  "inputs": [
+    {
+      "name": "title",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "deadline",
+      "type": "string",
+      "required": false
+    }
+  ],
+  "allowedTools": [
+    "llm_goal_plan",
+    "goal_manager_save_plan"
+  ],
+  "steps": [
+    {
+      "id": "generate_goal_plan",
+      "tool": "llm_goal_plan",
+      "dependsOn": [],
+      "approval": "none",
+      "capabilityStatus": "available"
+    },
+    {
+      "id": "save_goal_plan",
+      "tool": "goal_manager_save_plan",
+      "dependsOn": [
+        "generate_goal_plan"
+      ],
+      "approval": "required",
+      "capabilityStatus": "available",
+      "approvalPreviewFrom": "generate_goal_plan"
+    }
+  ],
+  "successChecks": [
+    {
+      "id": "goal-plan-generated",
+      "stepId": "generate_goal_plan",
+      "path": "tasks",
+      "type": "non_empty_array"
+    }
+  ]
+}
